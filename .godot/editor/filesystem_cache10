@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772949437
-::res://art/::1772949437
-Webtoon Pic.jpg::CompressedTexture2D::4975203454481620027::1772947478::1772949438::1::::<><><>0<>0<>406adf2053d36bed19e5b1cf8b93eec9<>res://.godot/imported/Webtoon Pic.jpg-eb9ea55b636150dabae4ef547598c006.ctex::
-::res://scenes/::1772949437
-node_2d.tscn::PackedScene::2099922808709170886::1772949437::0::1::::<><><>0<>0<><>::uid://cc5a4ymbxckdn::::res://art/Webtoon Pic.jpg<>uid://dgenn7lm3m1nw::::res://scripts/rigid_body_2d.gd<>uid://busd3nq2do8f2::::res://scripts/area_2d.gd
-::res://scripts/::1772949341
-area_2d.gd::GDScript::3827589217986237769::1772949341::0::1::::<>Area2D<><>0<>0<><>::
-rigid_body_2d.gd::GDScript::7589466858473662104::1772948520::0::1::::<>RigidBody2D<><>0<>0<><>::
+::res://::1772951583
+::res://art/::1772951290
+Webtoon Pic.jpg::CompressedTexture2D::4975203454481620027::1772951282::1772951584::1::::<><><>0<>0<>406adf2053d36bed19e5b1cf8b93eec9<>res://.godot/imported/Webtoon Pic.jpg-eb9ea55b636150dabae4ef547598c006.ctex::
+::res://scenes/::1772951290
+node_2d.tscn::PackedScene::2099922808709170886::1772951585::0::1::::<><><>0<>0<><>::uid://cc5a4ymbxckdn::::res://art/Webtoon Pic.jpg<>uid://dgenn7lm3m1nw::::res://scripts/rigid_body_2d.gd<>uid://busd3nq2do8f2::::res://scripts/area_2d.gd
+::res://scripts/::1772951282
+area_2d.gd::GDScript::3827589217986237769::1772951282::0::1::::<>Area2D<><>0<>0<><>::
+rigid_body_2d.gd::GDScript::7589466858473662104::1772951282::0::1::::<>RigidBody2D<><>0<>0<><>::

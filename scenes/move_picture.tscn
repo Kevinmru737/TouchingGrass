@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cbnpqrdhmgp4a"]
+
+[ext_resource type="Script" uid="uid://busd3nq2do8f2" path="res://scripts/area_2d.gd" id="1_qlcmu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+size = Vector2(362, 358)
+
+[node name="Node2D" type="Node2D" unique_id=377608422]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1774084636]
+script = ExtResource("1_qlcmu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=969163564]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_d21ai")
+debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
