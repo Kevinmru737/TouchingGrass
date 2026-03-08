@@ -11,20 +11,13 @@ config_version=5
 [application]
 
 config/name="TouchingGrass"
-<<<<<<< HEAD
-run/main_scene="uid://dt7wrqp7o8rir"
-=======
 run/main_scene="uid://ghu0nc16js56"
->>>>>>> aea2a6aea6746468bdfc6c2529bbb814b73d89f8
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-<<<<<<< HEAD
 hover_manager="*uid://jhq6w88a3a1v"
-=======
 SceneTransition="*uid://i48dgvh8c7x0"
->>>>>>> aea2a6aea6746468bdfc6c2529bbb814b73d89f8
 
 [input]
 
