@@ -3,6 +3,10 @@ extends Node
 
 @onready var dialogue_ui = $DialogueUI
 
+
+const MAIN_GAME = preload("res://scenes/main.tscn")
+
+
 enum GameState {
 	INTRO,    
 	MAKE_THE_BED,
@@ -13,6 +17,7 @@ enum GameState {
 }
 
 var curr_game_state = GameState.INTRO
+var advance_game = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +28,17 @@ func _process(delta: float) -> void:
 	if curr_game_state == GameState.INTRO:
 		
 		if Input.is_action_just_pressed("click"):
-			dialogue_ui.process_dialogue("intro")
+			advance_game = dialogue_ui.process_dialogue("intro")
+		if advance_game:
+			print("advancing game")
+			var main_game = MAIN_GAME.instantiate()
+			self.add_child(main_game)
+			move_child(main_game, 0)
+			$Background/ColorRect.hide()
+			SceneTransition.reset()
+			SceneTransition.fade_from_black()
+			advance_game = false
+			curr_game_state += 1
 	elif curr_game_state == GameState.MAKE_THE_BED:
 		pass
 	elif curr_game_state == GameState.FEED_THE_FISH:

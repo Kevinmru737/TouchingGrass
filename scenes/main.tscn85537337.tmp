@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dt7wrqp7o8rir"]
+
+[ext_resource type="PackedScene" uid="uid://b0xbgmtwsyoml" path="res://scenes/bedroom.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dq0k6en8tq2bj" path="res://scenes/fish.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://b1jy4y4lx3uj8" path="res://scenes/fishtank.tscn" id="3_tbgi4"]
+
+[node name="Main" type="Node2D" unique_id=715311036]
+
+[node name="Bedroom" parent="." unique_id=377608422 instance=ExtResource("1_sugp2")]
+
+[node name="Fish" parent="Bedroom" unique_id=1057339674 instance=ExtResource("2_jyhfs")]
+
+[node name="Fishtank" parent="Bedroom" unique_id=1999792412 instance=ExtResource("3_tbgi4")]

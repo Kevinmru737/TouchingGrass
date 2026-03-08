@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 
 func _on_mouse_entered() -> void:
 	hovering = true
+	print("this is fishy")
 
 func _on_mouse_exited() -> void:
 	hovering = false

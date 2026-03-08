@@ -21,11 +21,11 @@ var dialogue_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Control.mouse_filter = Control.MOUSE_FILTER_IGNORE  # Let clicks pass through
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -36,12 +36,23 @@ func process_dialogue(option):
 	if dialogue[option]:
 		# fade in new dialogue
 		if dialogue_index == 0:
-			dialogue_anim_player.play("fade_in")
+			fade_in_dialogue()
 		print("dialoge %s is processing" % option)
 		if dialogue_index < len(dialogue[option]):
 			dialogue_content.text = dialogue[option][dialogue_index]
 			dialogue_index += 1
+			return false
 		else:
 			dialogue_index = 0
-			dialogue_anim_player.play("fade_out")
+			fade_out_dialogue()
+			return true
+
+func fade_in_dialogue():
+	self.show()
+	dialogue_anim_player.play("fade_in")
+	await dialogue_anim_player.animation_finished
 	
+func fade_out_dialogue():
+	dialogue_anim_player.play("fade_out")
+	await dialogue_anim_player.animation_finished
+	self.hide()

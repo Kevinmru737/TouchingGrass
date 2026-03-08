@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1jy4y4lx3uj8"]
 
-[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_4vsyy"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="1_4vsyy"]
 [ext_resource type="Texture2D" uid="uid://m6tnrwdqsikk" path="res://art/tank.png" id="2_4o5xo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo2mm"]

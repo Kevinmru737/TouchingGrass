@@ -7,7 +7,17 @@ func _ready() -> void:
 
 
 func fade_to_black():
+	self.show()
 	anim_player.play("fade_to_black")
+	await anim_player.animation_finished
+	self.hide()
 	
 func fade_from_black():
+	self.show()
 	anim_player.play("fade_from_black")
+	await anim_player.animation_finished
+	self.hide()
+	
+func reset():
+	self.show()
+	anim_player.play("RESET")

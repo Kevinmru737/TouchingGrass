@@ -55,7 +55,6 @@ _data = {
 }
 
 [node name="SceneTransition" type="CanvasLayer" unique_id=626017430]
-layer = 2
 script = ExtResource("1_0wykx")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=779079046]
