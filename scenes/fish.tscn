@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dq0k6en8tq2bj"]
+
+[ext_resource type="Script" uid="uid://busd3nq2do8f2" path="res://scripts/draggable.gd" id="2_wpvan"]
+[ext_resource type="Texture2D" uid="uid://bsrqn1s5hl0fv" path="res://art/fish.png" id="3_21k1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
+size = Vector2(207, 69.5)
+
+[node name="Fish" type="Node2D" unique_id=1057339674]
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1806587452]
+script = ExtResource("2_wpvan")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=110165944]
+position = Vector2(819.00006, 399)
+scale = Vector2(0.11380203, 0.13240737)
+texture = ExtResource("3_21k1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=280098765]
+position = Vector2(820.5, 399.25)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_8g0i4")
+
+[connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="Area2D2" method="_on_mouse_exited"]
