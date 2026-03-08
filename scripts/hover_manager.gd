@@ -1,6 +1,7 @@
 extends Node
 
 var label: Label
+var current_hovered = null
 
 func _ready():
 	label = Label.new()
@@ -12,8 +13,10 @@ func _process(_delta):
 		label.global_position = get_viewport().get_mouse_position() + Vector2(16, -24)
 
 func on_hovered(interactable):
+	current_hovered = interactable
 	label.text = interactable.object_name
 	label.visible = true
 
 func on_unhovered(_interactable):
+	current_hovered = null
 	label.visible = false
