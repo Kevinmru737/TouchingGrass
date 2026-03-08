@@ -1,9 +1,0 @@
-res://scenes/move_picture.tscn
-res://scripts/interactable.gd
-res://hover_manager.gd
-res://scripts/area_2d.gd
-res://scenes/fish.tscn
-res://scenes/fishtank.tscn
-res://scenes/main.tscn
-res://scripts/draggable.gd
-res://scenes/bedroom.tscn
