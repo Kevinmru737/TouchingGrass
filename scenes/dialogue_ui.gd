@@ -5,7 +5,15 @@ extends CanvasLayer
 
 var dialogue = {
 	"intro": ["Dialogue 1. Depression Start",
-		"Intro 2nd dialogue, depression continues"]
+		"Intro 2nd dialogue, depression continues"],
+	"make_the_bed_success": ["Well I guess that wasn't too bad.",
+		"Just cleaning the bed makes the room look a lot different.",
+		"I even found Captain Tubbie's fish flakes, I wonder how it's been since he's eaten..."], 
+	"feed_the_fish_fail": ["That's Captain Tubbie", 
+		"I can't remember the last time I fed him..."],
+	"feed_the_fish_success": ["I've found the rations Captain.", 
+		"That should make you feel better."],
+		
 }
 var dialogue_index = 0
 
