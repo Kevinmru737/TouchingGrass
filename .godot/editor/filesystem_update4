@@ -1,0 +1,4 @@
+res://scripts/rigid_body_2d.gd
+res://scripts/area_2d.gd
+res://node_2d.tscn
+res://scenes/node_2d.tscn

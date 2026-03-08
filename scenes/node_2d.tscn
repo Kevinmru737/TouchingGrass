@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://46holwwsee27"]
+
+[ext_resource type="Texture2D" uid="uid://cc5a4ymbxckdn" path="res://art/Webtoon Pic.jpg" id="1_rnjyy"]
+[ext_resource type="Script" uid="uid://dgenn7lm3m1nw" path="res://scripts/rigid_body_2d.gd" id="2_4vge2"]
+[ext_resource type="Script" uid="uid://busd3nq2do8f2" path="res://scripts/area_2d.gd" id="3_04qyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
+size = Vector2(187.5, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+size = Vector2(362, 358)
+
+[node name="Node2D" type="Sprite2D" unique_id=340757273]
+position = Vector2(20, -7)
+texture = ExtResource("1_rnjyy")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1130628086]
+script = ExtResource("2_4vge2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=259603474]
+position = Vector2(38.25, -124)
+shape = SubResource("RectangleShape2D_kdubu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1963410602]
+script = ExtResource("3_04qyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1325798117]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_d21ai")
+debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
