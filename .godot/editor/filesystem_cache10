@@ -1,9 +1,16 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772953004
-::res://art/::1772951584
-Webtoon Pic.jpg::CompressedTexture2D::4975203454481620027::1772951282::1772951584::1::::<><><>0<>0<>406adf2053d36bed19e5b1cf8b93eec9<>res://.godot/imported/Webtoon Pic.jpg-eb9ea55b636150dabae4ef547598c006.ctex::
-::res://scenes/::1772951806
-move_picture.tscn::PackedScene::4870807347286690726::1772951806::0::1::::<><><>0<>0<><>::uid://busd3nq2do8f2::::res://scripts/area_2d.gd<>uid://cc5a4ymbxckdn::::res://art/Webtoon Pic.jpg
-::res://scripts/::1772951282
-area_2d.gd::GDScript::3827589217986237769::1772951282::0::1::::<>Area2D<><>0<>0<><>::
-rigid_body_2d.gd::GDScript::7589466858473662104::1772951282::0::1::::<>RigidBody2D<><>0<>0<><>::
+::res://::1773002189
+hover_manager.gd::GDScript::647178276508744393::1773002039::0::1::::<>Node<><>0<>0<><>::
+::res://art/::1773000068
+fish.png::CompressedTexture2D::3685910372988188971::1773000067::1773000068::1::::<><><>0<>0<>68ae9d4e3f36736c436232e084b27052<>res://.godot/imported/fish.png-c99ae11e6769340df3e93994426535a7.ctex::
+living_room2.jpg::CompressedTexture2D::2510028219248144259::1772999243::1772999093::1::::<><><>0<>0<>53724da46b8df1b1c55c87434adfdbd4<>res://.godot/imported/living_room2.jpg-d2afd15e225db3a4c7f2cfacc88ed990.ctex::
+tank.png::CompressedTexture2D::907439599256622446::1773000067::1773000068::1::::<><><>0<>0<>c13f5395540cfb12326c5111a4b1f456<>res://.godot/imported/tank.png-9090b66c0c9fe8a8190a4916fc4a3b6e.ctex::
+::res://scenes/::1773002189
+background.tscn::PackedScene::4188694555399560251::1773001983::0::1::::<><><>0<>0<><>::uid://bb042esuxnsv0::::res://art/living_room2.jpg
+fish.tscn::PackedScene::8334555754379309607::1773002084::0::1::::<><><>0<>0<><>::uid://busd3nq2do8f2::::res://scripts/fish.gd<>uid://bsrqn1s5hl0fv::::res://art/fish.png
+fishtank.tscn::PackedScene::4231420319809499027::1773001983::0::1::::<><><>0<>0<><>::uid://co38pn6l83ywu::::res://scripts/interactable.gd<>uid://m6tnrwdqsikk::::res://art/tank.png
+main.tscn::PackedScene::8560277165688704525::1773002201::0::1::::<><><>0<>0<><>::
+::res://scripts/::1773002157
+draggable.gd::GDScript::3827589217986237769::1773002157::0::1::::<>Area2D<><>0<>0<><>::
+interactable.gd::GDScript::5815318934339702512::1773001985::0::1::::<>Area2D<><>0<>0<><>::
+rigid_body_2d.gd::GDScript::7589466858473662104::1772954171::0::1::::<>RigidBody2D<><>0<>0<><>::

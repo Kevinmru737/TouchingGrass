@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b1jy4y4lx3uj8"]
+
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_4vsyy"]
+[ext_resource type="Texture2D" uid="uid://m6tnrwdqsikk" path="res://art/tank.png" id="2_4o5xo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo2mm"]
+size = Vector2(239.875, 151.25)
+
+[node name="Fishtank" type="Node2D" unique_id=1999792412]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1544198150]
+script = ExtResource("1_4vsyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1754967176]
+position = Vector2(476, 379)
+shape = SubResource("RectangleShape2D_wo2mm")
+debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=982806263]
+position = Vector2(478, 373)
+scale = Vector2(0.17458333, 0.16770834)
+texture = ExtResource("2_4o5xo")
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
