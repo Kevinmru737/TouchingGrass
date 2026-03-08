@@ -34,5 +34,6 @@ func process_dialogue(option):
 			dialogue_content.text = dialogue[option][dialogue_index]
 			dialogue_index += 1
 		else:
+			dialogue_index = 0
 			dialogue_anim_player.play("fade_out")
 	
