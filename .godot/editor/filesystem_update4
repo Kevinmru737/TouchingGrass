@@ -2,3 +2,5 @@ res://scenes/game.tscn
 res://scripts/game.gd
 res://scenes/dialogue_ui.tscn
 res://scenes/dialogue_ui.gd
+res://scenes/scene_transition.tscn
+res://scripts/scene_transition.gd

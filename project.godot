@@ -14,6 +14,10 @@ config/name="TouchingGrass"
 run/main_scene="uid://ghu0nc16js56"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+SceneTransition="*uid://i48dgvh8c7x0"
+
 [input]
 
 click={
