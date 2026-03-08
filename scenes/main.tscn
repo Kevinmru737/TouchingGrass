@@ -8,6 +8,6 @@
 
 [node name="Bedroom" parent="." unique_id=377608422 instance=ExtResource("1_sugp2")]
 
-[node name="Fish" parent="Bedroom" unique_id=1057339674 instance=ExtResource("2_jyhfs")]
-
 [node name="Fishtank" parent="Bedroom" unique_id=1999792412 instance=ExtResource("3_tbgi4")]
+
+[node name="Fish" parent="Bedroom" unique_id=1057339674 instance=ExtResource("2_jyhfs")]

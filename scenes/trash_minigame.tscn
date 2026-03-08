@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://fbepk5k82e6"]
+
+[ext_resource type="Script" uid="uid://ddw2f1ib0qhjl" path="res://scripts/trash_minigame.gd" id="1_8lnlx"]
+[ext_resource type="Texture2D" uid="uid://dy47dn0nnl2sy" path="res://art/trashcan.png" id="2_c8yw1"]
+[ext_resource type="Script" uid="uid://c0aa25hhosufk" path="res://scripts/trash_piece.gd" id="2_nn6ak"]
+[ext_resource type="Texture2D" uid="uid://bsy741swpvorj" path="res://art/crumpled_paper.png" id="4_7qycf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pxg8"]
+size = Vector2(211, 293.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_53w2d"]
+radius = 68.359344
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6jqtf"]
+radius = 85.47514
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_033qq"]
+radius = 78.00641
+
+[node name="TrashMinigame" type="Node2D" unique_id=592862160]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=815883261]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=788219557]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6784314)
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=28347524]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8lnlx")
+
+[node name="Trashcan" type="Area2D" parent="CanvasLayer/Panel" unique_id=1845695370]
+position = Vector2(-3, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trashcan" unique_id=74235425]
+position = Vector2(-3.8146973e-06, 3)
+scale = Vector2(2.28125, 2.3427835)
+texture = ExtResource("2_c8yw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trashcan" unique_id=8429911]
+position = Vector2(-3.5, -1.75)
+shape = SubResource("RectangleShape2D_3pxg8")
+
+[node name="Trash1" type="Area2D" parent="CanvasLayer/Panel" unique_id=1660859796]
+position = Vector2(-301, -76)
+script = ExtResource("2_nn6ak")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash1" unique_id=315617711]
+position = Vector2(0, 1)
+scale = Vector2(0.02887506, 0.028375061)
+texture = ExtResource("4_7qycf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash1" unique_id=108817596]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_53w2d")
+
+[node name="Trash2" type="Area2D" parent="CanvasLayer/Panel" unique_id=1109823125]
+position = Vector2(247, -168)
+script = ExtResource("2_nn6ak")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash2" unique_id=1162726238]
+position = Vector2(2, -3)
+scale = Vector2(0.036312502, 0.036062445)
+texture = ExtResource("4_7qycf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash2" unique_id=1570080321]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_6jqtf")
+
+[node name="Trash3" type="Area2D" parent="CanvasLayer/Panel" unique_id=2042153828]
+position = Vector2(252, 112)
+script = ExtResource("2_nn6ak")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash3" unique_id=2129727613]
+position = Vector2(2, -1)
+scale = Vector2(0.032374997, 0.035499956)
+texture = ExtResource("4_7qycf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash3" unique_id=745258471]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_033qq")
+
+[connection signal="mouse_entered" from="CanvasLayer/Panel/Trash1" to="CanvasLayer/Panel/Trash1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Panel/Trash1" to="CanvasLayer/Panel/Trash1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Panel/Trash2" to="CanvasLayer/Panel/Trash1" method="_on_trash_2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Panel/Trash2" to="CanvasLayer/Panel/Trash1" method="_on_trash_2_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Panel/Trash3" to="CanvasLayer/Panel/Trash1" method="_on_trash_3_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Panel/Trash3" to="CanvasLayer/Panel/Trash1" method="_on_trash_3_mouse_exited"]

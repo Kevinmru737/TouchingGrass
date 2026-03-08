@@ -4,8 +4,8 @@ extends Area2D
 @export var minigame_scene: PackedScene
 
 func _ready():
-	#mouse_entered.connect(_on_mouse_entered)
-	#mouse_exited.connect(_on_mouse_exited)
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 	pass
 
 func _input(event):
@@ -20,3 +20,4 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	HoverManager.on_unhovered(self)
+	
