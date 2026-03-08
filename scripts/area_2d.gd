@@ -10,7 +10,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if draggable and Input.is_action_pressed("click"):
-		parent.global_position = get_global_mouse_position()
+		var tween = get_tree().create_tween()
+		tween.tween_property(parent, "global_position", get_global_mouse_position(), 0.1).set_ease(Tween.EASE_OUT)
 	elif Input.is_action_just_released("click"):
 		print("bruh")
 
