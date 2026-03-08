@@ -1,2 +1,4 @@
-res://scenes/move_picture.tscn
-res://scripts/area_2d.gd
+res://scenes/game.tscn
+res://scripts/game.gd
+res://scenes/dialogue_ui.tscn
+res://scenes/dialogue_ui.gd

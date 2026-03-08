@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ghu0nc16js56"]
+
+[ext_resource type="PackedScene" uid="uid://ga7r2arbq1lg" path="res://scenes/dialogue_ui.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://dw3o0eamra3ba" path="res://scripts/game.gd" id="1_yqjtg"]
+
+[node name="GameManager" type="Node" unique_id=2071582035]
+script = ExtResource("1_yqjtg")
+
+[node name="Background" type="Node" parent="." unique_id=119600433]
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=175382405]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="DialogueUI" parent="." unique_id=499877340 instance=ExtResource("1_uwrxv")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1952427836]
+anchor_mode = 0
+zoom = Vector2(0.6, 0.6)

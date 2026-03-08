@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TouchingGrass"
-run/main_scene="uid://cbnpqrdhmgp4a"
+run/main_scene="uid://ghu0nc16js56"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [input]

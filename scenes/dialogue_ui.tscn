@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ga7r2arbq1lg"]
+
+[ext_resource type="Script" uid="uid://bm5u0i8qbxian" path="res://scenes/dialogue_ui.gd" id="1_6q285"]
+[ext_resource type="Texture2D" uid="uid://dc6snndbx22us" path="res://art/dialogue/plain_dialogue_box.png" id="1_dwk8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6q285"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=499877340]
+follow_viewport_enabled = true
+script = ExtResource("1_6q285")
+
+[node name="Control" type="Control" parent="." unique_id=1168779010]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -436.0
+offset_right = -6.0
+offset_bottom = -436.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1187582007]
+position = Vector2(270, 270)
+texture = ExtResource("1_dwk8m")
+
+[node name="DialogueContent" type="TextEdit" parent="Control/Sprite2D" unique_id=2082550008]
+offset_left = -296.0
+offset_top = 328.0
+offset_right = 471.0
+offset_bottom = 437.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6q285")
+text = "
+
+"
+placeholder_text = "
+"
+
+[node name="BackgroundRef" type="ColorRect" parent="." unique_id=1471536996]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.54509807)
