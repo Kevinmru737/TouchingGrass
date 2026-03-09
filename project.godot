@@ -16,8 +16,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
+<<<<<<< HEAD
 SceneTransition="*uid://i48dgvh8c7x0"
 HoverManager="*uid://jhq6w88a3a1v"
+=======
 HoverManager="*uid://jhq6w88a3a1v"
 SceneTransition="*uid://i48dgvh8c7x0"
 >>>>>>> c33a60ec45c0e48a55e742a463bf3c4e0c0ae3f3
