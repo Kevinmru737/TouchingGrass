@@ -1,10 +1,37 @@
 [gd_scene format=3 uid="uid://b0xbgmtwsyoml"]
 
-[ext_resource type="Texture2D" uid="uid://bb042esuxnsv0" path="res://art/living_room2.jpg" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://bdwsqjtkuwlmy" path="res://art/depression_room.png" id="1_0grwd"]
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="2_0grwd"]
+[ext_resource type="PackedScene" uid="uid://fbepk5k82e6" path="res://scenes/trash_minigame.tscn" id="3_mkmp1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0grwd"]
+size = Vector2(104, 119)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0grwd"]
+radius = 48.0
 
 [node name="Bedroom" type="Node2D" unique_id=377608422]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844880854]
-position = Vector2(588.00024, 250)
-scale = Vector2(0.24635176, 0.21428572)
-texture = ExtResource("1_o5qli")
+position = Vector2(863, 541)
+texture = ExtResource("1_0grwd")
+
+[node name="Area2D (trasharea)" type="Area2D" parent="." unique_id=173606586]
+script = ExtResource("2_0grwd")
+object_name = "Trash"
+minigame_scene = ExtResource("3_mkmp1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D (trasharea)" unique_id=114952111]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D (trasharea)" unique_id=172046382]
+position = Vector2(1436, 757.5)
+shape = SubResource("RectangleShape2D_0grwd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1420061594]
+position = Vector2(756, 495)
+script = ExtResource("2_0grwd")
+object_name = "??? Pet"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1567002601]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_0grwd")
