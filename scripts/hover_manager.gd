@@ -2,6 +2,7 @@ extends Node
 
 var label: Label
 var current_hovered = null
+var dialogue_active = false
 
 func _ready():
 	label = Label.new()
@@ -14,13 +15,15 @@ func _process(_delta):
 	pass
 
 func on_hovered(interactable):
-	current_hovered = interactable
+	if not dialogue_active:
+		current_hovered = interactable
 	#label.text = interactable.object_name
 	#print(interactable)
 	#label.visible = true
 	pass
 
 func on_unhovered(_interactable):
-	current_hovered = null
+	if not dialogue_active:
+		current_hovered = null
 	#label.visible = false
 	pass

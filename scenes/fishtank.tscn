@@ -17,21 +17,21 @@ shader_parameter/softness = 0.1
 [node name="Fishtank" type="Node2D" unique_id=1999792412]
 position = Vector2(-2, 4)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1544198150]
+[node name="Fishtank" type="Area2D" parent="." unique_id=1544198150]
 position = Vector2(2, -2)
 script = ExtResource("1_4vsyy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1754967176]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fishtank" unique_id=1754967176]
 position = Vector2(4, 3)
 shape = SubResource("CircleShape2D_4vsyy")
 debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=982806263]
+[node name="Sprite2D" type="Sprite2D" parent="Fishtank" unique_id=982806263]
 z_index = 1
 position = Vector2(109, 51)
 texture = ExtResource("2_4vsyy")
 
-[node name="Backglow" type="ColorRect" parent="Area2D" unique_id=622002930]
+[node name="Backglow" type="ColorRect" parent="Fishtank" unique_id=622002930]
 visible = false
 material = SubResource("ShaderMaterial_wo2mm")
 offset_left = 478.0

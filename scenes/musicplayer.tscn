@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://x4t4ugpvjnda"]
+
+[ext_resource type="Texture2D" uid="uid://bsrqn1s5hl0fv" path="res://art/fish.png" id="1_7ixm2"]
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_wunvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wunvt"]
+size = Vector2(126, 53)
+
+[node name="Musicplayer" type="Node2D" unique_id=1903010810]
+
+[node name="Musicplayer" type="Area2D" parent="." unique_id=109092779]
+script = ExtResource("1_wunvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Musicplayer" unique_id=1606292987]
+position = Vector2(3, -0.5)
+shape = SubResource("RectangleShape2D_wunvt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Musicplayer" unique_id=1837938793]
+position = Vector2(-3, 0)
+scale = Vector2(0.067708336, 0.12222222)
+texture = ExtResource("1_7ixm2")

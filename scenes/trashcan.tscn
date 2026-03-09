@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://3bgg303draey"]
+
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_1btkc"]
+[ext_resource type="Texture2D" uid="uid://uuoffv7d5snq" path="res://art/Trash_Bin_Before_Filled_Placeholder_.png" id="2_1btkc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_501ro"]
+size = Vector2(95, 115.5)
+
+[node name="Trashcan" type="Node2D" unique_id=748074161]
+
+[node name="Trashcan" type="Area2D" parent="." unique_id=1864206027]
+script = ExtResource("1_1btkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trashcan" unique_id=1883948473]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_501ro")
+
+[node name="Sprite2D" type="Sprite2D" parent="Trashcan" unique_id=363904717]
+position = Vector2(-577, -213)
+texture = ExtResource("2_1btkc")

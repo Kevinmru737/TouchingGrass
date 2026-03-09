@@ -3,11 +3,11 @@ extends Area2D
 var dragging = false
 var drag_offset = Vector2.ZERO
 static var any_dragging = false
-
+@onready var parent = $"../../.."
 func _process(_delta):
 	if dragging:
 		global_position = get_global_mouse_position() + drag_offset
-
+		
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed and not any_dragging:
@@ -26,5 +26,5 @@ func _input(event):
 func check_trashcan():
 	var trashcan = get_parent().get_node("Trashcan")
 	if overlaps_area(trashcan):
-		get_parent().on_trash_disposed()
+		parent.on_trash_disposed()
 		queue_free()

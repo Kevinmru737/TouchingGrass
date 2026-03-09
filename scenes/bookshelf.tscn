@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://4t85a1edy0us"]
+
+[ext_resource type="Texture2D" uid="uid://b4wgo4dwl56g6" path="res://art/Bad_Bookshelf_Placeholder_.png" id="1_d4oew"]
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_iit53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iit53"]
+size = Vector2(194.25, 293.5)
+
+[node name="Bookshelf" type="Node2D" unique_id=1750738724]
+
+[node name="Bookshelf" type="Area2D" parent="." unique_id=1990714910]
+script = ExtResource("1_iit53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelf" unique_id=1251361696]
+position = Vector2(-10, 23)
+shape = SubResource("RectangleShape2D_iit53")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bookshelf" unique_id=412264160]
+position = Vector2(-163, 133)
+texture = ExtResource("1_d4oew")

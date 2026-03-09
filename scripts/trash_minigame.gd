@@ -1,8 +1,11 @@
-extends Panel
+extends Node2D
 
 var trash_count = 3
+signal trash_cleaned
 
 func on_trash_disposed():
 	trash_count -= 1
 	if trash_count == 0:
-		get_parent().queue_free()
+		trash_cleaned.emit()
+		self.queue_free()
+		

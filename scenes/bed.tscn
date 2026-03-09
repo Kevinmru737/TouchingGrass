@@ -4,18 +4,18 @@
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="2_fqty4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akt7f"]
-size = Vector2(453.03818, 318.66483)
+size = Vector2(395.4174, 258.23196)
 
 [node name="Bed" type="Node2D" unique_id=884866481]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=752151823]
+[node name="Bed" type="Area2D" parent="." unique_id=752151823]
 script = ExtResource("2_fqty4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1016256109]
+[node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1016256109]
 position = Vector2(174, -194)
 texture = ExtResource("1_akt7f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=260211286]
-position = Vector2(5.462616, 18.168299)
-rotation = 0.7151657
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed" unique_id=260211286]
+position = Vector2(16, 0)
+rotation = 0.6547334
 shape = SubResource("RectangleShape2D_akt7f")

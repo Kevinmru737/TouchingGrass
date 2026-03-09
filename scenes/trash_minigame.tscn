@@ -18,6 +18,7 @@ radius = 85.47514
 radius = 78.00641
 
 [node name="TrashMinigame" type="Node2D" unique_id=592862160]
+script = ExtResource("1_8lnlx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=815883261]
 
@@ -41,7 +42,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8lnlx")
 
 [node name="Trashcan" type="Area2D" parent="CanvasLayer/Panel" unique_id=1845695370]
 position = Vector2(-3, 8)

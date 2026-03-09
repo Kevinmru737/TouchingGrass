@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://b0xbgmtwsyoml"]
 
 [ext_resource type="Texture2D" uid="uid://bdwsqjtkuwlmy" path="res://art/depression_room.png" id="1_0grwd"]
-[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="2_0grwd"]
-[ext_resource type="PackedScene" uid="uid://fbepk5k82e6" path="res://scenes/trash_minigame.tscn" id="3_mkmp1"]
+[ext_resource type="PackedScene" uid="uid://3bgg303draey" path="res://scenes/trashcan.tscn" id="2_pwtdf"]
 [ext_resource type="PackedScene" uid="uid://b1jy4y4lx3uj8" path="res://scenes/fishtank.tscn" id="4_mkmp1"]
 [ext_resource type="PackedScene" uid="uid://u7fl6k20wa7o" path="res://scenes/bed.tscn" id="5_7lolw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0grwd"]
-size = Vector2(104, 119)
+[ext_resource type="PackedScene" uid="uid://x4t4ugpvjnda" path="res://scenes/musicplayer.tscn" id="6_pwtdf"]
+[ext_resource type="PackedScene" uid="uid://4t85a1edy0us" path="res://scenes/bookshelf.tscn" id="7_tjgix"]
 
 [node name="Bedroom" type="Node2D" unique_id=377608422]
 
@@ -15,19 +13,15 @@ size = Vector2(104, 119)
 position = Vector2(960, 540)
 texture = ExtResource("1_0grwd")
 
-[node name="Area2D (trasharea)" type="Area2D" parent="." unique_id=173606586]
-script = ExtResource("2_0grwd")
-object_name = "Trash"
-minigame_scene = ExtResource("3_mkmp1")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D (trasharea)" unique_id=114952111]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D (trasharea)" unique_id=172046382]
-position = Vector2(1538, 758)
-shape = SubResource("RectangleShape2D_0grwd")
-
 [node name="Fishtank" parent="." unique_id=1999792412 instance=ExtResource("4_mkmp1")]
 position = Vector2(848, 493)
 
 [node name="Bed" parent="." unique_id=884866481 instance=ExtResource("5_7lolw")]
 position = Vector2(787, 732)
+
+[node name="Musicplayer" parent="." unique_id=1903010810 instance=ExtResource("6_pwtdf")]
+position = Vector2(1379, 233)
+
+[node name="Bookshelf" parent="." unique_id=1750738724 instance=ExtResource("7_tjgix")]
+
+[node name="Trashcan" parent="." unique_id=748074161 instance=ExtResource("2_pwtdf")]
