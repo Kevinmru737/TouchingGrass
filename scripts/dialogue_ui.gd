@@ -12,7 +12,15 @@ var dialogue = {
 	"feed_the_fish_fail": ["That's Captain Tubbie", 
 		"I can't remember the last time I fed him..."],
 	"feed_the_fish_success": ["I've found the rations Captain.", 
-		"That should make you feel better."],
+		"That should make you feel better.",
+		"Huh... He spit out a battery, I guess he was getting desperate"],
+	"turn_on_music_fail": ["It's dead."],
+	"turn_on_music_success": ["Hopefully the battery still works"],
+	"sort_books_fail": ["Ugghh...", 
+		"I'm not motivated enough to deal with that right now"],
+	"sort_books_success": ["Maybe sorting won't be so bad *hums along to the music*"],
+	"clean_garbage_fail": ["Maybe I'll just go back to bed..."],
+	"clean_garbage_success": ["Oh last little bit... ok here we go."]
 		
 }
 var dialogue_index = 0

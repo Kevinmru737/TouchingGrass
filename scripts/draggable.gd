@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("click") and hovering:
 		dragging = true
 		drag_offset = global_position - get_global_mouse_position()
+		
 	
 	if Input.is_action_just_released("click"):
 		dragging = false

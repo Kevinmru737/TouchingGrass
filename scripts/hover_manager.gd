@@ -13,6 +13,7 @@ func _process(_delta):
 
 func on_hovered(interactable):
 	label.text = interactable.object_name
+	print(interactable)
 	label.visible = true
 
 func on_unhovered(_interactable):

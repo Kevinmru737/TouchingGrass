@@ -1,25 +1,44 @@
 [gd_scene format=3 uid="uid://b1jy4y4lx3uj8"]
 
-[ext_resource type="Script" path="res://scripts/interactable.gd" id="1_4vsyy"]
-[ext_resource type="Texture2D" uid="uid://m6tnrwdqsikk" path="res://art/tank.png" id="2_4o5xo"]
+[ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_4vsyy"]
+[ext_resource type="Texture2D" uid="uid://dxdooomcj6q0k" path="res://art/Sad_Fish_Bowl_Placeholder_.png" id="2_4vsyy"]
+[ext_resource type="Shader" uid="uid://ca0grp0p3cr8l" path="res://shaders/radiant_glow.gdshader" id="3_4o5xo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo2mm"]
-size = Vector2(239.875, 151.25)
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vsyy"]
+radius = 47.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wo2mm"]
+shader = ExtResource("3_4o5xo")
+shader_parameter/glow_color = Vector4(1, 1, 0.5, 1)
+shader_parameter/intensity = 1.0
+shader_parameter/radius = 0.2
+shader_parameter/softness = 0.1
 
 [node name="Fishtank" type="Node2D" unique_id=1999792412]
+position = Vector2(-2, 4)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1544198150]
+position = Vector2(2, -2)
 script = ExtResource("1_4vsyy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1754967176]
-position = Vector2(476, 379)
-shape = SubResource("RectangleShape2D_wo2mm")
+position = Vector2(4, 3)
+shape = SubResource("CircleShape2D_4vsyy")
 debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=982806263]
-position = Vector2(478, 373)
-scale = Vector2(0.17458333, 0.16770834)
-texture = ExtResource("2_4o5xo")
+z_index = 1
+position = Vector2(109, 51)
+texture = ExtResource("2_4vsyy")
+
+[node name="Backglow" type="ColorRect" parent="Area2D" unique_id=622002930]
+visible = false
+material = SubResource("ShaderMaterial_wo2mm")
+offset_left = -59.0
+offset_top = -55.0
+offset_right = 64.0
+offset_bottom = 61.0
+color = Color(0, 1, 1, 1)
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
