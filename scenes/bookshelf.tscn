@@ -2,16 +2,22 @@
 
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_iit53"]
 [ext_resource type="Texture2D" uid="uid://c4tbsc8wmb4du" path="res://art/room_dark/Depressed_Room_Bookshelf.png" id="2_iit53"]
+[ext_resource type="Texture2D" uid="uid://dtlu4jck60axk" path="res://art/room_bright/Happy_Room_Bookshelf.png" id="3_kkcsm"]
 
 [node name="Bookshelf" type="Node2D" unique_id=1750738724]
 
 [node name="Bookshelf" type="Area2D" parent="." unique_id=1990714910]
 script = ExtResource("1_iit53")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bookshelf" unique_id=412264160]
+[node name="DarkVersion" type="Sprite2D" parent="Bookshelf" unique_id=412264160]
 position = Vector2(-163, 103)
 texture = ExtResource("2_iit53")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Bookshelf" unique_id=1144462239]
 position = Vector2(70, 177)
 polygon = PackedVector2Array(-174, -95, 0, -1, 2, -277, -173, -381)
+
+[node name="BrightVersion" type="Sprite2D" parent="Bookshelf" unique_id=260323229]
+modulate = Color(0.42265162, 0.42485252, 0.5370987, 1)
+position = Vector2(-163, 103)
+texture = ExtResource("3_kkcsm")

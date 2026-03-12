@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_4vsyy"]
 [ext_resource type="Texture2D" uid="uid://di5doow37uhu6" path="res://art/room_dark/Depressed_Room_Fish_Bowl.png" id="2_4o5xo"]
 [ext_resource type="Shader" uid="uid://ca0grp0p3cr8l" path="res://shaders/radiant_glow.gdshader" id="3_4o5xo"]
+[ext_resource type="Texture2D" uid="uid://b4wnd4kel2aop" path="res://art/room_bright/Happy_Room_Fish_Bowl.png" id="4_wo2mm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vsyy"]
 radius = 47.0
@@ -26,7 +27,7 @@ position = Vector2(4, 3)
 shape = SubResource("CircleShape2D_4vsyy")
 debug_color = Color(0.69051385, 0.42470035, 0.685536, 0.41960785)
 
-[node name="Sprite2D" type="Sprite2D" parent="Fishtank" unique_id=982806263]
+[node name="DarkVersion" type="Sprite2D" parent="Fishtank" unique_id=982806263]
 z_index = 1
 position = Vector2(109, 51)
 texture = ExtResource("2_4o5xo")
@@ -40,3 +41,10 @@ offset_right = 601.0
 offset_bottom = 489.0
 scale = Vector2(0.17458333, 0.16770834)
 color = Color(0, 1, 1, 1)
+
+[node name="BrightVersion" type="Sprite2D" parent="Fishtank" unique_id=235503624]
+visible = false
+modulate = Color(0.5036132, 0.5036132, 0.61614865, 1)
+z_index = 1
+position = Vector2(109, 51)
+texture = ExtResource("4_wo2mm")

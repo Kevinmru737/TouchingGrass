@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="2_fqty4"]
 [ext_resource type="Texture2D" uid="uid://drbineym0fijo" path="res://art/room_dark/Depressed_Room_Bed.png" id="2_raxto"]
+[ext_resource type="Texture2D" uid="uid://c4f1mtayou0w4" path="res://art/room_bright/Happy_Room_Bed.png" id="3_raxto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akt7f"]
 size = Vector2(402.09442, 308.25574)
@@ -11,7 +12,7 @@ size = Vector2(402.09442, 308.25574)
 [node name="Bed" type="Area2D" parent="." unique_id=752151823]
 script = ExtResource("2_fqty4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1016256109]
+[node name="DarkVersion" type="Sprite2D" parent="Bed" unique_id=1016256109]
 position = Vector2(173, -198)
 texture = ExtResource("2_raxto")
 
@@ -19,3 +20,8 @@ texture = ExtResource("2_raxto")
 position = Vector2(-2.0000076, 24.000015)
 rotation = 0.6547334
 shape = SubResource("RectangleShape2D_akt7f")
+
+[node name="BrightVersion" type="Sprite2D" parent="Bed" unique_id=79981232]
+modulate = Color(0.45490196, 0.45490196, 0.61960787, 1)
+position = Vector2(173, -198)
+texture = ExtResource("3_raxto")

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://fbepk5k82e6"]
 
 [ext_resource type="Script" uid="uid://ddw2f1ib0qhjl" path="res://scripts/trash_minigame.gd" id="1_8lnlx"]
-[ext_resource type="Texture2D" uid="uid://dy47dn0nnl2sy" path="res://art/trashcan.png" id="2_c8yw1"]
+[ext_resource type="Texture2D" uid="uid://dy47dn0nnl2sy" path="res://art/placeholders/trashcan.png" id="2_c8yw1"]
 [ext_resource type="Script" uid="uid://c0aa25hhosufk" path="res://scripts/trash_piece.gd" id="2_nn6ak"]
-[ext_resource type="Texture2D" uid="uid://bsy741swpvorj" path="res://art/crumpled_paper.png" id="4_7qycf"]
+[ext_resource type="Texture2D" uid="uid://bsy741swpvorj" path="res://art/placeholders/crumpled_paper.png" id="4_7qycf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pxg8"]
 size = Vector2(211, 293.5)

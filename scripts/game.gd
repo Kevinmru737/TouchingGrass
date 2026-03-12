@@ -33,6 +33,7 @@ var curr_game_state = GameState.INTRO
 var advance_game = false
 var dialog_done = false
 var curr_interact_obj = "None"
+var interactables = []
 
 var curr_dialog = "intro"
 var dialog_active = false
@@ -65,7 +66,7 @@ func _process(_delta: float) -> void:
 			curr_game_state = (curr_game_state as int + 1) as GameState
 			
 			# grab list of interactables to connect their signals
-			var interactables = get_tree().get_nodes_in_group("interactables")
+			interactables = get_tree().get_nodes_in_group("interactables")
 			for i in interactables:
 				i.interact_initiated.connect(_on_interact_initiated)
 			return
@@ -96,6 +97,7 @@ func _on_interact_initiated(obj_name):
 	if curr_game_state == GameState.MAKE_THE_BED:
 		if curr_interact_obj == dialog_options["Bed"]:
 			curr_dialog = curr_interact_obj + "_success"
+			get_interactable("Bed").success_interact()
 			advance_game = true
 		else:
 			failed_option = true
@@ -103,6 +105,7 @@ func _on_interact_initiated(obj_name):
 		if curr_interact_obj == dialog_options["Fishtank"]:
 			curr_dialog = curr_interact_obj + "_success"
 			advance_game = true
+			get_interactable("Fishtank").success_interact()
 		elif curr_interact_obj == dialog_options["Bed"]:
 			curr_dialog = curr_interact_obj + "_done"
 		else:
@@ -111,6 +114,7 @@ func _on_interact_initiated(obj_name):
 		if curr_interact_obj == dialog_options["Musicplayer"]:
 			curr_dialog = curr_interact_obj + "_success"
 			advance_game = true
+			get_interactable("Musicplayer").success_interact()
 		elif curr_interact_obj == dialog_options["Bed"] or  curr_interact_obj == dialog_options["Fishtank"]:
 			curr_dialog = curr_interact_obj + "_done"
 		else:
@@ -119,6 +123,7 @@ func _on_interact_initiated(obj_name):
 		if curr_interact_obj == dialog_options["Bookshelf"]:
 			curr_dialog = curr_interact_obj + "_success"
 			advance_game = true
+			get_interactable("Bookshelf").success_interact()
 		elif curr_interact_obj == dialog_options["Bed"] or curr_interact_obj == dialog_options["Fishtank"] or curr_interact_obj == dialog_options["Musicplayer"]:
 			curr_dialog = curr_interact_obj + "_done"
 		else:
@@ -144,4 +149,8 @@ func _on_minigame_completed():
 	dialog_active = true
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 
+func get_interactable(obj_name):
+	for i in interactables:
+		if i.name == obj_name:
+			return i
 	

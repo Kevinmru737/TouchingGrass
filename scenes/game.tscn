@@ -74,4 +74,6 @@ horizontal_alignment = 1
 text_direction = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1952427836]
+scale = Vector2(1.0981202, 1.0981202)
 anchor_mode = 0
+zoom = Vector2(0.67, 0.67)

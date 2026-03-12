@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="1_1btkc"]
 [ext_resource type="Texture2D" uid="uid://bnuvk8bb0y3ul" path="res://art/room_dark/Depressed_Room_Trash_Can.png" id="2_1btkc"]
+[ext_resource type="Texture2D" uid="uid://dipj0txpvngaf" path="res://art/room_bright/Happy_Room_Trash.png" id="3_501ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_501ro"]
 size = Vector2(89, 113.75)
@@ -15,6 +16,11 @@ script = ExtResource("1_1btkc")
 position = Vector2(-0.5, 2.875)
 shape = SubResource("RectangleShape2D_501ro")
 
-[node name="Sprite2D" type="Sprite2D" parent="Trashcan" unique_id=363904717]
+[node name="DarkVersion" type="Sprite2D" parent="Trashcan" unique_id=363904717]
 position = Vector2(-577, -213)
 texture = ExtResource("2_1btkc")
+
+[node name="BrightVersion" type="Sprite2D" parent="Trashcan" unique_id=2112558376]
+visible = false
+position = Vector2(-577, -213)
+texture = ExtResource("3_501ro")

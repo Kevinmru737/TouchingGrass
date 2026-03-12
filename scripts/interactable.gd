@@ -1,16 +1,27 @@
 extends Area2D
 
 #@onready var backglow = $Backglow
-@onready var cursor = load("res://art/placeholders/smallerfish.png")
+@onready var cursor = load("res://art/misc/Cursor_Interact.png")
 @export var object_name: String = "Object"
 @export var minigame_scene: PackedScene
+@onready var dark_sprite = $DarkVersion
+@onready var bright_sprite = $BrightVersion
+
+# interacted_with_flags
+
+var bed_success_flag = false
+var fishtank_success_flag = false
+var musicplayer_success_flag = false
+var bookshelf_success_flag = false
+var trashcan_success_flag = false
+
 
 signal interact_initiated 
 
 func _ready():
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
-	pass
+	bright_sprite.hide()
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -37,3 +48,19 @@ func _on_mouse_exited():
 func start_minigame():
 	if minigame_scene:
 		get_tree().current_scene.add_child(minigame_scene.instantiate())
+		
+func success_interact():
+	var curr_flag_name = self.name.to_lower() + "_success_flag"
+	
+	# Get the actual flag variable
+	if not get(curr_flag_name):
+		var tween = get_tree().create_tween()
+		dark_sprite.modulate.a = 1.0
+		bright_sprite.modulate.a = 0.0
+		bright_sprite.show()
+		
+		tween.tween_property(dark_sprite, "modulate:a", 0.0, 0.5)
+		tween.parallel().tween_property(bright_sprite, "modulate:a", 1.0, 0.5)
+		
+		# Set the flag to true
+		set(curr_flag_name, true)
