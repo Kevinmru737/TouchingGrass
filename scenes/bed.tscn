@@ -12,10 +12,10 @@ size = Vector2(402.09442, 308.25574)
 script = ExtResource("2_fqty4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1016256109]
-position = Vector2(290, -351)
+position = Vector2(173, -198)
 texture = ExtResource("2_raxto")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed" unique_id=260211286]
-position = Vector2(121.00003, -118)
+position = Vector2(-2.0000076, 24.000015)
 rotation = 0.6547334
 shape = SubResource("RectangleShape2D_akt7f")

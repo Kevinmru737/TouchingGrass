@@ -10,20 +10,21 @@
 [node name="Bedroom" type="Node2D" unique_id=377608422]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844880854]
-position = Vector2(1607, 905.0001)
-scale = Vector2(1.67, 1.67)
+position = Vector2(960, 540)
 texture = ExtResource("1_pwtdf")
 region_rect = Rect2(271, 0, 1651, 1086)
 
 [node name="Fishtank" parent="." unique_id=1999792412 instance=ExtResource("4_mkmp1")]
-position = Vector2(848, 493)
+position = Vector2(849, 491)
 
 [node name="Bed" parent="." unique_id=884866481 instance=ExtResource("5_7lolw")]
-position = Vector2(1317, 1255)
+position = Vector2(787, 738)
 
 [node name="Musicplayer" parent="." unique_id=1903010810 instance=ExtResource("6_pwtdf")]
-position = Vector2(1379, 233)
+position = Vector2(1459, 609)
 
 [node name="Bookshelf" parent="." unique_id=1750738724 instance=ExtResource("7_tjgix")]
+position = Vector2(1123, 437)
 
 [node name="Trashcan" parent="." unique_id=748074161 instance=ExtResource("2_pwtdf")]
+position = Vector2(1537, 753)
