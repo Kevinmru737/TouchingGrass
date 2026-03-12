@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsrqn1s5hl0fv"
-path="res://.godot/imported/fish.png-c99ae11e6769340df3e93994426535a7.ctex"
+uid="uid://b3tr2nmh2eol"
+path="res://.godot/imported/Happy_Room_Final_Together_1.png-a9bde8c36214d3495b92aa75462a56c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/fish.png"
-dest_files=["res://.godot/imported/fish.png-c99ae11e6769340df3e93994426535a7.ctex"]
+source_file="res://art/room_bright/Happy_Room_Final_Together_1.png"
+dest_files=["res://.godot/imported/Happy_Room_Final_Together_1.png-a9bde8c36214d3495b92aa75462a56c0.ctex"]
 
 [params]
 

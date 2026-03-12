@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxdooomcj6q0k"
-path="res://.godot/imported/Sad_Fish_Bowl_Placeholder_.png-8cc30c610691a81a829b9d0d70653d37.ctex"
+uid="uid://bg456sm8l6k54"
+path="res://.godot/imported/Depressed_Room_Music.png-ef98976c5f1e8c0a0215a922acb20ebe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sad_Fish_Bowl_Placeholder_.png"
-dest_files=["res://.godot/imported/Sad_Fish_Bowl_Placeholder_.png-8cc30c610691a81a829b9d0d70653d37.ctex"]
+source_file="res://art/room_dark/Depressed_Room_Music.png"
+dest_files=["res://.godot/imported/Depressed_Room_Music.png-ef98976c5f1e8c0a0215a922acb20ebe.ctex"]
 
 [params]
 

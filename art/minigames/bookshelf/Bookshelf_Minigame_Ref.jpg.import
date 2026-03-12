@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsy741swpvorj"
-path="res://.godot/imported/crumpled_paper.png-083512c948d523b7261f806b9240212d.ctex"
+uid="uid://bhafarghonxu5"
+path="res://.godot/imported/Bookshelf_Minigame_Ref.jpg-b6e0bc90dde8d6349df55a16765a0949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/crumpled_paper.png"
-dest_files=["res://.godot/imported/crumpled_paper.png-083512c948d523b7261f806b9240212d.ctex"]
+source_file="res://art/minigames/bookshelf/Bookshelf_Minigame_Ref.jpg"
+dest_files=["res://.godot/imported/Bookshelf_Minigame_Ref.jpg-b6e0bc90dde8d6349df55a16765a0949.ctex"]
 
 [params]
 

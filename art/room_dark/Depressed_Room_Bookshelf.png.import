@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5mwf54qrb1ri"
-path="res://.godot/imported/smallerfish.png-68bf73e7c2ba83470fdae4bb12d8008f.ctex"
+uid="uid://c4tbsc8wmb4du"
+path="res://.godot/imported/Depressed_Room_Bookshelf.png-2a93aaece66e3e614c458720e772f419.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/smallerfish.png"
-dest_files=["res://.godot/imported/smallerfish.png-68bf73e7c2ba83470fdae4bb12d8008f.ctex"]
+source_file="res://art/room_dark/Depressed_Room_Bookshelf.png"
+dest_files=["res://.godot/imported/Depressed_Room_Bookshelf.png-2a93aaece66e3e614c458720e772f419.ctex"]
 
 [params]
 

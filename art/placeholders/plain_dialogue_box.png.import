@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy47dn0nnl2sy"
-path="res://.godot/imported/trashcan.png-e4270a50e090a7961bface25c593b03c.ctex"
+uid="uid://dc6snndbx22us"
+path="res://.godot/imported/plain_dialogue_box.png-4d8a6b9ce6a3efb26122e3af27865100.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/trashcan.png"
-dest_files=["res://.godot/imported/trashcan.png-e4270a50e090a7961bface25c593b03c.ctex"]
+source_file="res://art/placeholders/plain_dialogue_box.png"
+dest_files=["res://.godot/imported/plain_dialogue_box.png-4d8a6b9ce6a3efb26122e3af27865100.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc6snndbx22us"
-path="res://.godot/imported/plain_dialogue_box.png-3575753a7e8449dd943c8f5226fdb29b.ctex"
+uid="uid://uuoffv7d5snq"
+path="res://.godot/imported/Trash_Bin_Before_Filled_Placeholder_.png-c38ef57a311b96233b8d0caaca98074f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dialogue/plain_dialogue_box.png"
-dest_files=["res://.godot/imported/plain_dialogue_box.png-3575753a7e8449dd943c8f5226fdb29b.ctex"]
+source_file="res://art/placeholders/Trash_Bin_Before_Filled_Placeholder_.png"
+dest_files=["res://.godot/imported/Trash_Bin_Before_Filled_Placeholder_.png-c38ef57a311b96233b8d0caaca98074f.ctex"]
 
 [params]
 

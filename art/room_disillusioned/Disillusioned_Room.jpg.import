@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4j8lvbbp3v7"
-path="res://.godot/imported/grass.jpg-6bf80ce027c33bff29f8efdc82c56fd1.ctex"
+uid="uid://4eipsj8tqalm"
+path="res://.godot/imported/Disillusioned_Room.jpg-60bb9b69328ff5effbd73be2b41d351e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/grass.jpg"
-dest_files=["res://.godot/imported/grass.jpg-6bf80ce027c33bff29f8efdc82c56fd1.ctex"]
+source_file="res://art/room_disillusioned/Disillusioned_Room.jpg"
+dest_files=["res://.godot/imported/Disillusioned_Room.jpg-60bb9b69328ff5effbd73be2b41d351e.ctex"]
 
 [params]
 

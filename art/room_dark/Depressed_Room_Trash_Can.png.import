@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uuoffv7d5snq"
-path="res://.godot/imported/Trash_Bin_Before_Filled_Placeholder_.png-01723a95babc1faf185e8fbfb9996636.ctex"
+uid="uid://bnuvk8bb0y3ul"
+path="res://.godot/imported/Depressed_Room_Trash_Can.png-a09e928720c82be7f311a6b1d154ae47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Trash_Bin_Before_Filled_Placeholder_.png"
-dest_files=["res://.godot/imported/Trash_Bin_Before_Filled_Placeholder_.png-01723a95babc1faf185e8fbfb9996636.ctex"]
+source_file="res://art/room_dark/Depressed_Room_Trash_Can.png"
+dest_files=["res://.godot/imported/Depressed_Room_Trash_Can.png-a09e928720c82be7f311a6b1d154ae47.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df8rjxtgxq3ps"
-path="res://.godot/imported/Messy_Bed_Placeholder_.png-85d294d60965764cfb73bf156e082517.ctex"
+uid="uid://dko8u1nfhsbit"
+path="res://.godot/imported/Dailogue_Boxes.png-7d3e792e37816204d42ad14eab2c24e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Messy_Bed_Placeholder_.png"
-dest_files=["res://.godot/imported/Messy_Bed_Placeholder_.png-85d294d60965764cfb73bf156e082517.ctex"]
+source_file="res://art/dialogue/Dailogue_Boxes.png"
+dest_files=["res://.godot/imported/Dailogue_Boxes.png-7d3e792e37816204d42ad14eab2c24e8.ctex"]
 
 [params]
 

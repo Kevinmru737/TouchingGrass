@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdwsqjtkuwlmy"
-path="res://.godot/imported/depression_room.png-333d66845bbbdd51857cd2ec0e1ca333.ctex"
+uid="uid://ci2fam5oh4l3s"
+path="res://.godot/imported/Happy_Room_Music.png-2dad6325330f11adefb0b2eae13b2400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/depression_room.png"
-dest_files=["res://.godot/imported/depression_room.png-333d66845bbbdd51857cd2ec0e1ca333.ctex"]
+source_file="res://art/room_bright/Happy_Room_Music.png"
+dest_files=["res://.godot/imported/Happy_Room_Music.png-2dad6325330f11adefb0b2eae13b2400.ctex"]
 
 [params]
 
