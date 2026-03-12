@@ -3,6 +3,7 @@ extends Node
 
 @onready var dialogue_ui = $DialogueUI
 
+@onready var click_prompt = $DialogueUI/StartGameUI
 
 const MAIN_GAME = preload("res://scenes/main.tscn")
 
@@ -26,10 +27,11 @@ enum GameState {
 	TOUCH_GRASS
 }
 
+var click_prompt_faded = false
+
 var curr_game_state = GameState.INTRO
 var advance_game = false
 var dialog_done = false
-var interactables = []
 var curr_interact_obj = "None"
 
 var curr_dialog = "intro"
@@ -46,6 +48,9 @@ func _process(_delta: float) -> void:
 		
 		if Input.is_action_just_pressed("click"):
 			advance_game = dialogue_ui.process_dialogue("intro")
+			if not click_prompt_faded:
+				click_prompt.get_node("AnimationPlayer").play("fade out")
+				click_prompt_faded = true
 		if advance_game:
 			print("advancing game")
 			var main_game = MAIN_GAME.instantiate()
@@ -55,7 +60,9 @@ func _process(_delta: float) -> void:
 			SceneTransition.reset()
 			SceneTransition.fade_from_black()
 			advance_game = false
-			curr_game_state += 1
+			
+			#the below is equiv to curr_game_state++ but godot throws a warning, thus the casting
+			curr_game_state = (curr_game_state as int + 1) as GameState
 			
 			# grab list of interactables to connect their signals
 			var interactables = get_tree().get_nodes_in_group("interactables")
@@ -72,7 +79,7 @@ func _process(_delta: float) -> void:
 		
 		if advance_game and dialog_done:
 			print(curr_game_state)
-			curr_game_state += 1
+			curr_game_state = (curr_game_state as int + 1) as GameState
 			advance_game = false
 			if curr_game_state == GameState.TOUCH_GRASS:
 				get_tree().current_scene.add_child(touch_grass_scene.instantiate())
@@ -82,8 +89,8 @@ func _process(_delta: float) -> void:
 		
 		
 
-func _on_interact_initiated(name):
-	curr_interact_obj = dialog_options[name]
+func _on_interact_initiated(obj_name):
+	curr_interact_obj = dialog_options[obj_name]
 	var failed_option = false
 	
 	if curr_game_state == GameState.MAKE_THE_BED:

@@ -60,6 +60,7 @@ root_node = NodePath("../../../Background")
 libraries/ = SubResource("AnimationLibrary_lbhrr")
 
 [node name="CenterContainer" type="CenterContainer" parent="DialogueUI/StartGameUI" unique_id=1463242974]
+offset_top = 257.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 

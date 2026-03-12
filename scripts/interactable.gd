@@ -1,7 +1,7 @@
 extends Area2D
 
 #@onready var backglow = $Backglow
-@onready var cursor = load("res://art/smallerfish.png")
+@onready var cursor = load("res://art/placeholders/smallerfish.png")
 @export var object_name: String = "Object"
 @export var minigame_scene: PackedScene
 
