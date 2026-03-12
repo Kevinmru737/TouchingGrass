@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://u7fl6k20wa7o"]
 
-[ext_resource type="Texture2D" uid="uid://df8rjxtgxq3ps" path="res://art/Messy_Bed_Placeholder_.png" id="1_akt7f"]
 [ext_resource type="Script" uid="uid://co38pn6l83ywu" path="res://scripts/interactable.gd" id="2_fqty4"]
+[ext_resource type="Texture2D" uid="uid://drbineym0fijo" path="res://art/room_dark/Depressed_Room_Bed.png" id="2_raxto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akt7f"]
-size = Vector2(395.4174, 258.23196)
+size = Vector2(402.09442, 308.25574)
 
 [node name="Bed" type="Node2D" unique_id=884866481]
 
@@ -12,10 +12,10 @@ size = Vector2(395.4174, 258.23196)
 script = ExtResource("2_fqty4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1016256109]
-position = Vector2(174, -194)
-texture = ExtResource("1_akt7f")
+position = Vector2(290, -351)
+texture = ExtResource("2_raxto")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed" unique_id=260211286]
-position = Vector2(16, 0)
+position = Vector2(121.00003, -118)
 rotation = 0.6547334
 shape = SubResource("RectangleShape2D_akt7f")

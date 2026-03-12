@@ -17,4 +17,3 @@ color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1952427836]
 anchor_mode = 0
-zoom = Vector2(0.6, 0.6)

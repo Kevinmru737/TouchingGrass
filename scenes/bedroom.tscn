@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0xbgmtwsyoml"]
 
-[ext_resource type="Texture2D" uid="uid://bdwsqjtkuwlmy" path="res://art/depression_room.png" id="1_0grwd"]
+[ext_resource type="Texture2D" uid="uid://b5v01fx44tga0" path="res://art/room_dark/Depressed_Room_Final_Together_2.png" id="1_pwtdf"]
 [ext_resource type="PackedScene" uid="uid://3bgg303draey" path="res://scenes/trashcan.tscn" id="2_pwtdf"]
 [ext_resource type="PackedScene" uid="uid://b1jy4y4lx3uj8" path="res://scenes/fishtank.tscn" id="4_mkmp1"]
 [ext_resource type="PackedScene" uid="uid://u7fl6k20wa7o" path="res://scenes/bed.tscn" id="5_7lolw"]
@@ -10,14 +10,16 @@
 [node name="Bedroom" type="Node2D" unique_id=377608422]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844880854]
-position = Vector2(960, 540)
-texture = ExtResource("1_0grwd")
+position = Vector2(1607, 905.0001)
+scale = Vector2(1.67, 1.67)
+texture = ExtResource("1_pwtdf")
+region_rect = Rect2(271, 0, 1651, 1086)
 
 [node name="Fishtank" parent="." unique_id=1999792412 instance=ExtResource("4_mkmp1")]
 position = Vector2(848, 493)
 
 [node name="Bed" parent="." unique_id=884866481 instance=ExtResource("5_7lolw")]
-position = Vector2(787, 732)
+position = Vector2(1317, 1255)
 
 [node name="Musicplayer" parent="." unique_id=1903010810 instance=ExtResource("6_pwtdf")]
 position = Vector2(1379, 233)
