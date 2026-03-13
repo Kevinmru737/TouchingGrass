@@ -6,6 +6,7 @@ var draggable = false
 var placed = false
 static var any_dragging = false
 
+@export var drop_sound: AudioStream
 @export var correct_slot: NodePath
 @onready var parent = $"../../../.."
 
@@ -36,6 +37,8 @@ func _input(event):
 				check_slot()
 
 func check_slot():
+	if drop_sound:
+		AudioManager.play_sound(drop_sound)
 	var slot = get_node(correct_slot)
 	if global_position.distance_to(slot.global_position) < 30:
 		global_position = slot.global_position

@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 HoverManager="*uid://jhq6w88a3a1v"
 SceneTransition="*uid://i48dgvh8c7x0"
+AudioManager="*uid://dja54y3nulu7b"
 
 [display]
 

@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cxircuggvrhgi" path="res://art/minigames/bookshelf/Books_Mini_game.png" id="3_8ccec"]
 [ext_resource type="Script" uid="uid://crlkq7t7fhhc" path="res://scripts/book_piece.gd" id="3_etw1u"]
 [ext_resource type="Texture2D" uid="uid://bhumexktpl84l" path="res://art/minigames/bookshelf/Books_Mini_game_3.png" id="4_3yg3x"]
+[ext_resource type="AudioStream" uid="uid://cwo7o2ppmkt3b" path="res://audio/thump1.wav" id="4_yf2wr"]
+[ext_resource type="AudioStream" uid="uid://c2fmcquddod08" path="res://audio/thump2.wav" id="6_7ym7y"]
 [ext_resource type="Script" uid="uid://4ecbxxy5j1x7" path="res://scripts/book_slot.gd" id="6_8ccec"]
+[ext_resource type="AudioStream" uid="uid://da6hrwnafny7x" path="res://audio/thump3.wav" id="7_stcna"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ccec"]
 size = Vector2(38, 335)
@@ -78,6 +81,7 @@ region_rect = Rect2(648, 0, 1153, 1080)
 position = Vector2(-558.00006, -177.99998)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("4_yf2wr")
 correct_slot = NodePath("../Slot1")
 
 [node name="isometric" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book1" unique_id=2034910535]
@@ -95,6 +99,7 @@ shape = SubResource("RectangleShape2D_8ccec")
 position = Vector2(-460.00003, -96.00002)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("6_7ym7y")
 correct_slot = NodePath("../Slot2")
 
 [node name="this_is_fine" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book2" unique_id=809730409]
@@ -112,6 +117,7 @@ shape = SubResource("RectangleShape2D_3yg3x")
 position = Vector2(-366.00003, 101.99999)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("7_stcna")
 correct_slot = NodePath("../Slot3")
 
 [node name="book_title" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book3" unique_id=506016483]
@@ -129,6 +135,7 @@ shape = SubResource("RectangleShape2D_yf2wr")
 position = Vector2(-266.00003, -92)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("4_yf2wr")
 correct_slot = NodePath("../Slot4")
 
 [node name="how_to_get_a_job" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book4" unique_id=1755019333]
@@ -146,6 +153,7 @@ shape = SubResource("RectangleShape2D_7ym7y")
 position = Vector2(226.99991, -283)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("6_7ym7y")
 correct_slot = NodePath("../Slot5")
 
 [node name="illusion" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book5" unique_id=56380506]
@@ -163,6 +171,7 @@ shape = SubResource("RectangleShape2D_stcna")
 position = Vector2(481.9999, -255.99997)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("7_stcna")
 correct_slot = NodePath("../Slot6")
 
 [node name="vol_1" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book6" unique_id=1209089986]
@@ -180,6 +189,7 @@ shape = SubResource("RectangleShape2D_dukt2")
 position = Vector2(-542.00006, 137)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("4_yf2wr")
 correct_slot = NodePath("../Slot7")
 
 [node name="vol_2" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book7" unique_id=1509785659]
@@ -197,6 +207,7 @@ shape = SubResource("RectangleShape2D_1okbr")
 position = Vector2(-346.00003, 300)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("6_7ym7y")
 correct_slot = NodePath("../Slot8")
 
 [node name="how_to_beat_a_game" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book8" unique_id=51186788]
@@ -214,6 +225,7 @@ shape = SubResource("RectangleShape2D_ov262")
 position = Vector2(171.00003, -215.00002)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("7_stcna")
 correct_slot = NodePath("../Slot9")
 
 [node name="have_you_had" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book9" unique_id=1304813747]
@@ -231,6 +243,7 @@ shape = SubResource("RectangleShape2D_bu2l8")
 position = Vector2(220.00003, 314)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
+drop_sound = ExtResource("4_yf2wr")
 correct_slot = NodePath("../Slot10")
 
 [node name="reading_for_dummies" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book10" unique_id=39392653]
