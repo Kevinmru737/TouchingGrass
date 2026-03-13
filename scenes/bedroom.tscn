@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b0xbgmtwsyoml"]
 
 [ext_resource type="Texture2D" uid="uid://b5v01fx44tga0" path="res://art/room_dark/Depressed_Room_Final_Together_2.png" id="1_pwtdf"]
+[ext_resource type="Texture2D" uid="uid://wues5oasfb76" path="res://art/room_disillusioned/Depressed_Room_Without_Bed.png" id="1_tjgix"]
 [ext_resource type="PackedScene" uid="uid://3bgg303draey" path="res://scenes/trashcan.tscn" id="2_pwtdf"]
+[ext_resource type="Texture2D" uid="uid://b3tr2nmh2eol" path="res://art/room_bright/Happy_Room_Final_Together_1.png" id="3_xunnl"]
 [ext_resource type="PackedScene" uid="uid://b1jy4y4lx3uj8" path="res://scenes/fishtank.tscn" id="4_mkmp1"]
 [ext_resource type="PackedScene" uid="uid://u7fl6k20wa7o" path="res://scenes/bed.tscn" id="5_7lolw"]
 [ext_resource type="PackedScene" uid="uid://x4t4ugpvjnda" path="res://scenes/musicplayer.tscn" id="6_pwtdf"]
@@ -9,22 +11,38 @@
 
 [node name="Bedroom" type="Node2D" unique_id=377608422]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844880854]
+[node name="Background" type="Node2D" parent="." unique_id=32480988]
+
+[node name="DarkBackDrop" type="Sprite2D" parent="Background" unique_id=696208031]
+position = Vector2(960, 540)
+texture = ExtResource("1_tjgix")
+region_rect = Rect2(271, 0, 1651, 1086)
+
+[node name="DarkBGSpooky2" type="Sprite2D" parent="Background" unique_id=1679559600]
 position = Vector2(960, 540)
 texture = ExtResource("1_pwtdf")
 region_rect = Rect2(271, 0, 1651, 1086)
+
+[node name="Happy" type="Sprite2D" parent="Background" unique_id=1629762177]
+z_index = 2
+position = Vector2(960, 540)
+texture = ExtResource("3_xunnl")
 
 [node name="Fishtank" parent="." unique_id=1999792412 instance=ExtResource("4_mkmp1")]
 position = Vector2(849, 491)
 
 [node name="Bed" parent="." unique_id=884866481 instance=ExtResource("5_7lolw")]
+z_index = 1
 position = Vector2(787, 738)
 
 [node name="Musicplayer" parent="." unique_id=1903010810 instance=ExtResource("6_pwtdf")]
+z_index = 1
 position = Vector2(1459, 609)
 
 [node name="Bookshelf" parent="." unique_id=1750738724 instance=ExtResource("7_tjgix")]
+z_index = 1
 position = Vector2(1123, 437)
 
 [node name="Trashcan" parent="." unique_id=748074161 instance=ExtResource("2_pwtdf")]
+z_index = 1
 position = Vector2(1537, 753)

@@ -37,13 +37,15 @@ var interactables = []
 
 var curr_dialog = "intro"
 var dialog_active = false
+var book_minigame_scene = load("res://scenes/book_minigame.tscn")
 var minigame_scene = load("res://scenes/trash_minigame.tscn")
 var touch_grass_scene = load("res://scenes/touch_grass.tscn")
 var main_game
+var ending_started = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	$Happy.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if curr_game_state == GameState.INTRO:
@@ -83,8 +85,20 @@ func _process(_delta: float) -> void:
 			print(curr_game_state)
 			curr_game_state = (curr_game_state as int + 1) as GameState
 			advance_game = false
-			if curr_game_state == GameState.TOUCH_GRASS:
-				get_tree().current_scene.add_child(touch_grass_scene.instantiate())
+			if curr_game_state == GameState.TOUCH_GRASS and ending_started == false:
+				var tg_scene = touch_grass_scene.instantiate()
+				self.add_child(tg_scene)
+				move_child(tg_scene, 0)
+				ending_started = true
+				advance_game = false
+				dialog_done = false
+				curr_dialog = "grass"
+				#dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+				return
+	#if curr_game_state == GameState.TOUCH_GRASS and ending_started:
+		#if Input.is_action_just_pressed("click") and not dialog_done:
+			#print("TOUCH_GRASS click fired, curr_dialog: %s, dialog_done: %s" % [curr_dialog, dialog_done])
+			#dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 	#the beginning game is a little different atm
 	
 		
@@ -122,9 +136,11 @@ func _on_interact_initiated(obj_name):
 			failed_option = true
 	if curr_game_state == GameState.SORT_BOOKS:
 		if curr_interact_obj == dialog_options["Bookshelf"]:
-			curr_dialog = curr_interact_obj + "_success"
-			advance_game = true
-			get_interactable("Bookshelf").success_interact()
+			var book_mg = book_minigame_scene.instantiate()
+			book_mg.books_sorted.connect(_bg_minigame_completed)
+			get_tree().current_scene.add_child(book_mg)
+			main_game.hide()
+			return
 		elif curr_interact_obj == dialog_options["Bed"] or curr_interact_obj == dialog_options["Fishtank"] or curr_interact_obj == dialog_options["Musicplayer"]:
 			curr_dialog = curr_interact_obj + "_done"
 		else:
@@ -138,19 +154,30 @@ func _on_interact_initiated(obj_name):
 			return
 		elif curr_interact_obj == dialog_options["Bed"] or dialog_options["Fishtank"] or dialog_options["Musicplayer"] or dialog_options["Bookshelf"]:
 			curr_dialog = curr_interact_obj + "_done"
-			
 	
 	if failed_option:
 		curr_dialog = curr_interact_obj + "_fail"
 	
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 	
-func _on_minigame_completed():
-	curr_dialog ="clean_garbage_success"
+	
+func _bg_minigame_completed():
+	curr_dialog ="sort_books_success"
 	main_game.show()
 	advance_game = true
 	dialog_active = true
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+	get_interactable("Bookshelf").success_interact()
+	
+func _on_minigame_completed():
+	curr_dialog ="clean_garbage_success"
+	#main_game.show_happy()
+	main_game.hide()
+	$Happy.show()
+	advance_game = true
+	dialog_active = true
+	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+	#get_interactable("Trashcan").success_interact()
 
 func get_interactable(obj_name):
 	for i in interactables:

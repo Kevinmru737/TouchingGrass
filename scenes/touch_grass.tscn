@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://3qrxlmr5djed"]
 
-[ext_resource type="Texture2D" uid="uid://4j8lvbbp3v7" path="res://art/grass.jpg" id="1_8d10d"]
+[ext_resource type="Texture2D" uid="uid://bmeffatgk0ryw" path="res://art/misc/Ending_Scene_.png" id="1_8d10d"]
 
 [node name="TouchGrass" type="CanvasLayer" unique_id=536250651]
 follow_viewport_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=298932775]
-position = Vector2(748, 560)
+position = Vector2(960, 540)
 texture = ExtResource("1_8d10d")

@@ -29,7 +29,9 @@ var dialogue = {
 	"clean_garbage_fail": ["Maybe I'll just go back to bed..."],
 	"clean_garbage_success": ["Oh last little bit... ok here we go.",
 		"Hey I can open my door freely now.", 
-		"Maybe I should step outside..."]
+		"Maybe I should step outside..."],
+	"grass": ["wow it's grass",
+		"amazing"]
 		
 }
 var dialogue_index = 0
