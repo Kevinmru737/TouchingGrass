@@ -33,7 +33,7 @@ var dialogue = {
 		
 }
 var dialogue_index = 0
-
+var is_dialogue_processing = false  # Add this flag
 
 
 # Called when the node enters the scene tree for the first time.
@@ -48,28 +48,33 @@ func _process(_delta: float) -> void:
 
 # Must be passed a String corresponding to the dialog option requested
 func process_dialogue(option):
+	if is_dialogue_processing or not dialogue.has(option):
+		return false
 	
-	if dialogue[option]:
-		HoverManager.dialogue_active = true
-		# fade in new dialogue
-		if dialogue_index == 0:
-			fade_in_dialogue()
-		if dialogue_index < len(dialogue[option]):
-			print("dialogue %s is processing:" % option + "%d" % dialogue_index)
-			dialogue_content.text = dialogue[option][dialogue_index]
-			dialogue_index += 1
-			return false
-		else:
-			dialogue_index = 0
-			fade_out_dialogue()
-			HoverManager.dialogue_active = false
-			return true
+	is_dialogue_processing = true
+	
+	if dialogue_index == 0:
+		fade_in_dialogue()
+	
+	if dialogue_index < len(dialogue[option]):
+		print("dialogue %s is processing: %d" % [option, dialogue_index])
+		dialogue_content.text = dialogue[option][dialogue_index]
+		dialogue_index += 1
+		is_dialogue_processing = false
+		return false
+	else:
+		dialogue_index = 0
+		fade_out_dialogue()
+		HoverManager.dialogue_active = false
+		is_dialogue_processing = false
+		return true
 
 func fade_in_dialogue():
 	self.show()
+	HoverManager.dialogue_active = true
 	dialogue_anim_player.play("fade_in")
 	await dialogue_anim_player.animation_finished
-	
+
 func fade_out_dialogue():
 	dialogue_anim_player.play("fade_out")
 	await dialogue_anim_player.animation_finished
