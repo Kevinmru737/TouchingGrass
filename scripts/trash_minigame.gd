@@ -1,6 +1,6 @@
 extends Node2D
 
-var trash_count = 3
+var trash_count = 5
 signal trash_cleaned
 
 func on_trash_disposed():
