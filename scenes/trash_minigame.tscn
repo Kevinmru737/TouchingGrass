@@ -42,29 +42,24 @@ color = Color(0, 0, 0, 0.6784314)
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=341392473]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_vertical = 8
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=28347524]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 600.0
-offset_top = 320.0
-offset_right = 640.0
-offset_bottom = 360.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TrashCanBG" type="Sprite2D" parent="CanvasLayer/Control/Panel" unique_id=76773063]
-position = Vector2(340, 200)
+position = Vector2(960, 540)
 texture = ExtResource("2_3pxg8")
 
 [node name="Trashcan" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1845695370]
-position = Vector2(317, 319)
+position = Vector2(927, 645)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trashcan" unique_id=74235425]
 visible = false
@@ -78,7 +73,7 @@ rotation = -1.5708159
 shape = SubResource("CapsuleShape2D_7qycf")
 
 [node name="Trash1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1660859796]
-position = Vector2(-349, 494)
+position = Vector2(267, 760)
 script = ExtResource("2_nn6ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash1" unique_id=315617711]
@@ -94,7 +89,7 @@ rotation = -0.5692414
 shape = SubResource("CapsuleShape2D_6jqtf")
 
 [node name="Trash2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1109823125]
-position = Vector2(-356, -103)
+position = Vector2(283, 252)
 script = ExtResource("2_nn6ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash2" unique_id=1162726238]
@@ -108,7 +103,7 @@ position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_6jqtf")
 
 [node name="Trash3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=2042153828]
-position = Vector2(287, -127)
+position = Vector2(880, 226)
 script = ExtResource("2_nn6ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash3" unique_id=2129727613]
@@ -123,7 +118,7 @@ position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_033qq")
 
 [node name="Trash5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=750027424]
-position = Vector2(1007, 425)
+position = Vector2(1640, 751)
 script = ExtResource("2_nn6ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash5" unique_id=260131322]
@@ -139,7 +134,7 @@ rotation = -0.18788539
 shape = SubResource("CapsuleShape2D_3pxg8")
 
 [node name="Trash4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=983708059]
-position = Vector2(1037, -92)
+position = Vector2(1550, 236)
 script = ExtResource("2_nn6ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash4" unique_id=90510950]
