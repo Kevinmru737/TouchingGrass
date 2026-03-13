@@ -1,0 +1,376 @@
+[gd_scene format=3 uid="uid://bvuqs68hkajt0"]
+
+[ext_resource type="Script" uid="uid://d1r6krnwcf3kr" path="res://scripts/book_minigame.gd" id="1_etw1u"]
+[ext_resource type="Texture2D" uid="uid://b70linqjfx8hu" path="res://art/minigames/bookshelf/Bookshelf_Mini_game_2.png" id="1_hnm66"]
+[ext_resource type="Texture2D" uid="uid://cxircuggvrhgi" path="res://art/minigames/bookshelf/Books_Mini_game.png" id="3_8ccec"]
+[ext_resource type="Script" uid="uid://crlkq7t7fhhc" path="res://scripts/book_piece.gd" id="3_etw1u"]
+[ext_resource type="Texture2D" uid="uid://bhumexktpl84l" path="res://art/minigames/bookshelf/Books_Mini_game_3.png" id="4_3yg3x"]
+[ext_resource type="Script" uid="uid://4ecbxxy5j1x7" path="res://scripts/book_slot.gd" id="6_8ccec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ccec"]
+size = Vector2(38, 335)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yg3x"]
+size = Vector2(99, 271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf2wr"]
+size = Vector2(54, 271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ym7y"]
+size = Vector2(111, 473.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stcna"]
+size = Vector2(603, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dukt2"]
+size = Vector2(62, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1okbr"]
+size = Vector2(61, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ov262"]
+size = Vector2(473, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bu2l8"]
+size = Vector2(767, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee0ay"]
+size = Vector2(807, 134)
+
+[node name="BookMinigame" type="Node2D" unique_id=1428659787]
+script = ExtResource("1_etw1u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1431295082]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1881099003]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=2024093629]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 600.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Bookshelf" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1089704583]
+position = Vector2(-2.0067139, 12.351227)
+scale = Vector2(0.66890424, 0.66890424)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Bookshelf" unique_id=135437142]
+position = Vector2(328.99994, 10.487122)
+scale = Vector2(0.9710531, 0.997246)
+texture = ExtResource("1_hnm66")
+region_enabled = true
+region_rect = Rect2(648, 0, 1153, 1080)
+
+[node name="Book1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=749841833]
+position = Vector2(-558.00006, -177.99998)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot1")
+
+[node name="isometric" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book1" unique_id=2034910535]
+position = Vector2(9.0539455e-05, -2.2053719e-05)
+scale = Vector2(1.0810511, 0.96738815)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(61, 28, 29, 341)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book1" unique_id=707940995]
+position = Vector2(9.280443e-05, 1.5676022e-05)
+shape = SubResource("RectangleShape2D_8ccec")
+
+[node name="Book2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=247438064]
+position = Vector2(-460.00003, -96.00002)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot2")
+
+[node name="this_is_fine" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book2" unique_id=809730409]
+position = Vector2(4.172325e-05, -4.887581e-06)
+scale = Vector2(1.0119196, 0.93728215)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(139, 29, 94, 287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book2" unique_id=576666935]
+position = Vector2(4.1604042e-05, -1.2397766e-05)
+shape = SubResource("RectangleShape2D_3yg3x")
+
+[node name="Book3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1239162426]
+position = Vector2(-366.00003, 101.99999)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot3")
+
+[node name="book_title" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book3" unique_id=506016483]
+position = Vector2(3.415346e-05, 7.867813e-06)
+scale = Vector2(0.953475, 0.9605732)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(277, 36, 55, 279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book3" unique_id=1756977842]
+position = Vector2(3.3974648e-05, 7.1525574e-06)
+shape = SubResource("RectangleShape2D_yf2wr")
+
+[node name="Book4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1615801887]
+position = Vector2(-266.00003, -92)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot4")
+
+[node name="how_to_get_a_job" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book4" unique_id=1755019333]
+position = Vector2(4.4584274e-05, 7.390976e-06)
+scale = Vector2(0.82468706, 0.94646287)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(481, 8, 130, 496)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book4" unique_id=1173155906]
+position = Vector2(2.9563904e-05, -1.335144e-05)
+shape = SubResource("RectangleShape2D_7ym7y")
+
+[node name="Book5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=911798259]
+position = Vector2(226.99991, -283)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot5")
+
+[node name="illusion" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book5" unique_id=56380506]
+position = Vector2(4.529953e-05, 2.2768974e-05)
+scale = Vector2(0.98854333, 0.8872965)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(21, 522, 611, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book5" unique_id=1964404277]
+position = Vector2(3.886223e-05, 2.5987625e-05)
+shape = SubResource("RectangleShape2D_stcna")
+
+[node name="Book6" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=943511465]
+position = Vector2(481.9999, -255.99997)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot6")
+
+[node name="vol_1" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book6" unique_id=1209089986]
+position = Vector2(4.3153763e-05, -4.172325e-07)
+scale = Vector2(0.9604762, 1.0531852)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(39, 668, 63, 169)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book6" unique_id=1144067600]
+position = Vector2(5.1021576e-05, -4.172325e-07)
+shape = SubResource("RectangleShape2D_dukt2")
+
+[node name="Book7" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=642417952]
+position = Vector2(-542.00006, 137)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot7")
+
+[node name="vol_2" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book7" unique_id=1509785659]
+position = Vector2(8.34465e-07, 4.208088e-05)
+scale = Vector2(0.9559057, 1.047059)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(100, 667, 63, 170)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book7" unique_id=1135452957]
+position = Vector2(1.847744e-06, 4.1604042e-05)
+shape = SubResource("RectangleShape2D_1okbr")
+
+[node name="Book8" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=12852603]
+position = Vector2(-346.00003, 300)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot8")
+
+[node name="how_to_beat_a_game" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book8" unique_id=51186788]
+position = Vector2(3.6597252e-05, -2.2411346e-05)
+scale = Vector2(1.0136708, 1.0545455)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(54, 881, 463, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book8" unique_id=328452987]
+position = Vector2(5.567074e-05, 3.7670135e-05)
+shape = SubResource("RectangleShape2D_ov262")
+
+[node name="Book9" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=365212001]
+position = Vector2(171.00003, -215.00002)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot9")
+
+[node name="have_you_had" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book9" unique_id=1304813747]
+position = Vector2(2.4080276e-05, 4.553795e-05)
+scale = Vector2(0.9908617, 0.94736814)
+texture = ExtResource("3_8ccec")
+region_enabled = true
+region_rect = Rect2(761, 905, 766, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book9" unique_id=298017129]
+position = Vector2(4.6491623e-05, 4.5120716e-05)
+shape = SubResource("RectangleShape2D_bu2l8")
+
+[node name="Book10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1053583476]
+position = Vector2(220.00003, 314)
+scale = Vector2(0.66890424, 0.66890424)
+script = ExtResource("3_etw1u")
+correct_slot = NodePath("../Slot10")
+
+[node name="reading_for_dummies" type="Sprite2D" parent="CanvasLayer/Control/Panel/Book10" unique_id=39392653]
+position = Vector2(6.771088e-05, 3.528595e-05)
+scale = Vector2(0.9791667, 0.94814795)
+texture = ExtResource("4_3yg3x")
+region_enabled = true
+region_rect = Rect2(749, 97, 816, 135)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Book10" unique_id=664696843]
+position = Vector2(5.1021576e-05, -2.6464462e-05)
+shape = SubResource("RectangleShape2D_ee0ay")
+
+[node name="Slot1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=699524522]
+position = Vector2(439, -4)
+script = ExtResource("6_8ccec")
+slot_id = 1
+
+[node name="Slot1" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot1" unique_id=306876253]
+position = Vector2(3.0577183e-05, 0)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_8ccec")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1292178403]
+position = Vector2(390, -26)
+script = ExtResource("6_8ccec")
+slot_id = 2
+
+[node name="Slot2" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot2" unique_id=1187662713]
+position = Vector2(9.1552734e-05, -1.9073486e-06)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_3yg3x")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=613661917]
+position = Vector2(337, -27)
+script = ExtResource("6_8ccec")
+slot_id = 3
+
+[node name="Slot3" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot3" unique_id=1662038311]
+position = Vector2(-0.99990845, 0.9999981)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_yf2wr")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=862168566]
+position = Vector2(492, 42)
+script = ExtResource("6_8ccec")
+slot_id = 4
+
+[node name="Slot4" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot4" unique_id=379811032]
+position = Vector2(-0.9999695, 3.8146973e-06)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_7ym7y")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=508709659]
+position = Vector2(113, 33)
+script = ExtResource("6_8ccec")
+slot_id = 5
+
+[node name="Slot5" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot5" unique_id=2014583503]
+position = Vector2(7.6293945e-06, 3.8146973e-06)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_stcna")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot6" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=297655968]
+position = Vector2(250, -64)
+script = ExtResource("6_8ccec")
+slot_id = 6
+
+[node name="Slot6" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot6" unique_id=605761366]
+position = Vector2(-0.99998474, 0.9999962)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_dukt2")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot7" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=2094877926]
+position = Vector2(293, -63)
+script = ExtResource("6_8ccec")
+slot_id = 7
+
+[node name="Slot7" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot7" unique_id=1686616968]
+position = Vector2(3.0517578e-05, -3.8146973e-06)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_1okbr")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot8" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=908230084]
+position = Vector2(69, -62)
+script = ExtResource("6_8ccec")
+slot_id = 8
+
+[node name="Slot8" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot8" unique_id=463399830]
+position = Vector2(-0.9999924, -3.8146973e-06)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_ov262")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot9" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1294438673]
+position = Vector2(167, 87)
+script = ExtResource("6_8ccec")
+slot_id = 9
+
+[node name="Slot9" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot9" unique_id=317356069]
+position = Vector2(1.5258789e-05, 1.0000076)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_bu2l8")
+debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
+
+[node name="Slot10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1165743048]
+position = Vector2(182, 157)
+script = ExtResource("6_8ccec")
+slot_id = 10
+
+[node name="Slot10" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot10" unique_id=159611964]
+position = Vector2(-0.99998474, -0.99998474)
+scale = Vector2(0.66890424, 0.66890424)
+shape = SubResource("RectangleShape2D_ee0ay")
+debug_color = Color(0.8935266, 0.24766585, 0.5258745, 0.41960785)
+
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book2" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book2" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_2_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book3" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_3_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book3" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_3_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book4" to="." method="_on_book_4_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book4" to="." method="_on_book_4_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book5" to="." method="_on_book_5_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book5" to="." method="_on_book_5_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book6" to="." method="_on_book_6_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book6" to="." method="_on_book_6_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book7" to="." method="_on_book_7_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book7" to="." method="_on_book_7_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book8" to="." method="_on_book_8_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book8" to="." method="_on_book_8_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book9" to="." method="_on_book_9_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book9" to="." method="_on_book_9_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book10" to="." method="_on_book_10_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book10" to="." method="_on_book_10_mouse_exited"]
