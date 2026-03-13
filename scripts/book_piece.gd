@@ -37,7 +37,7 @@ func _input(event):
 
 func check_slot():
 	var slot = get_node(correct_slot)
-	if overlaps_area(slot):
+	if global_position.distance_to(slot.global_position) < 30:
 		global_position = slot.global_position
 		placed = true
 		draggable = false

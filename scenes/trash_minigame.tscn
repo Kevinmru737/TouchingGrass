@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddw2f1ib0qhjl" path="res://scripts/trash_minigame.gd" id="1_8lnlx"]
 [ext_resource type="Texture2D" uid="uid://hy5haoqh3dmo" path="res://art/minigames/trashcan/Trash_Can_For_Mini_game.png" id="2_3pxg8"]
+[ext_resource type="Texture2D" uid="uid://dy47dn0nnl2sy" path="res://art/placeholders/trashcan.png" id="2_c8yw1"]
 [ext_resource type="Script" uid="uid://c0aa25hhosufk" path="res://scripts/trash_piece.gd" id="2_nn6ak"]
 [ext_resource type="Texture2D" uid="uid://dfiu0iwiu51p0" path="res://art/minigames/trashcan/Trash_For_Mini_game.png" id="5_53w2d"]
 
@@ -29,33 +30,37 @@ script = ExtResource("1_8lnlx")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=815883261]
 follow_viewport_enabled = true
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=341392473]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=788219557]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6784314)
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=28347524]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 600.0
-offset_top = 320.0
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=28347524]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_right = 640.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Trashcan" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1845695370]
-position = Vector2(317, 319)
-
-[node name="TrashCanBG" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trashcan" unique_id=76773063]
-position = Vector2(23, -119)
+[node name="TrashCanBG" type="Sprite2D" parent="CanvasLayer/Panel" unique_id=76773063]
+position = Vector2(960, 540)
 texture = ExtResource("2_3pxg8")
+
+[node name="Trashcan" type="Area2D" parent="CanvasLayer/Panel" unique_id=1845695370]
+position = Vector2(927, 645)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trashcan" unique_id=74235425]
+visible = false
+position = Vector2(-3.8146973e-06, 3)
+scale = Vector2(2.28125, 2.3427835)
+texture = ExtResource("2_c8yw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trashcan" unique_id=8429911]
 position = Vector2(-12, -14)
