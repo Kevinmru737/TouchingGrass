@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var dialogue_content = $CenterContainer/Sprite2D/DialogueContent
+@onready var dialogue_content = $Control/TextureRect/DialogueContent
 @onready var dialogue_anim_player = $AnimationPlayer
 
 var dialogue = {

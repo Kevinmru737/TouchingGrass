@@ -4,7 +4,7 @@ var dragging = false
 var drag_offset = Vector2.ZERO
 var draggable = false
 static var any_dragging = false
-@onready var parent = $"../../../.."
+@onready var parent = $"../../.."
 
 func _ready():
 	mouse_entered.connect(_on_mouse_entered)
