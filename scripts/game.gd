@@ -39,6 +39,7 @@ var curr_dialog = "intro"
 var dialog_active = false
 var minigame_scene = load("res://scenes/trash_minigame.tscn")
 var touch_grass_scene = load("res://scenes/touch_grass.tscn")
+var main_game
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,7 +55,7 @@ func _process(_delta: float) -> void:
 				click_prompt_faded = true
 		if advance_game:
 			print("advancing game")
-			var main_game = MAIN_GAME.instantiate()
+			main_game = MAIN_GAME.instantiate()
 			self.add_child(main_game)
 			move_child(main_game, 0)
 			$Background/ColorRect.hide()
@@ -133,6 +134,7 @@ func _on_interact_initiated(obj_name):
 			var minigame = minigame_scene.instantiate()
 			minigame.trash_cleaned.connect(_on_minigame_completed)
 			get_tree().current_scene.add_child(minigame)
+			main_game.hide()
 			return
 		elif curr_interact_obj == dialog_options["Bed"] or dialog_options["Fishtank"] or dialog_options["Musicplayer"] or dialog_options["Bookshelf"]:
 			curr_dialog = curr_interact_obj + "_done"
@@ -145,6 +147,7 @@ func _on_interact_initiated(obj_name):
 	
 func _on_minigame_completed():
 	curr_dialog ="clean_garbage_success"
+	main_game.show()
 	advance_game = true
 	dialog_active = true
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)

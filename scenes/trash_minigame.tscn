@@ -39,112 +39,107 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6784314)
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=341392473]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-size_flags_vertical = 8
-
-[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=28347524]
-layout_mode = 1
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=28347524]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="TrashCanBG" type="Sprite2D" parent="CanvasLayer/Control/Panel" unique_id=76773063]
+[node name="TrashCanBG" type="Sprite2D" parent="CanvasLayer/Panel" unique_id=76773063]
 position = Vector2(960, 540)
 texture = ExtResource("2_3pxg8")
 
-[node name="Trashcan" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1845695370]
+[node name="Trashcan" type="Area2D" parent="CanvasLayer/Panel" unique_id=1845695370]
 position = Vector2(927, 645)
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trashcan" unique_id=74235425]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trashcan" unique_id=74235425]
 visible = false
 position = Vector2(-3.8146973e-06, 3)
 scale = Vector2(2.28125, 2.3427835)
 texture = ExtResource("2_c8yw1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trashcan" unique_id=8429911]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trashcan" unique_id=8429911]
 position = Vector2(-12, -14)
 rotation = -1.5708159
 shape = SubResource("CapsuleShape2D_7qycf")
 
-[node name="Trash1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1660859796]
+[node name="Trash1" type="Area2D" parent="CanvasLayer/Panel" unique_id=1660859796]
 position = Vector2(267, 760)
 script = ExtResource("2_nn6ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash1" unique_id=315617711]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash1" unique_id=315617711]
 position = Vector2(0, 1)
 scale = Vector2(1, 0.966)
 texture = ExtResource("5_53w2d")
 region_enabled = true
 region_rect = Rect2(72.27998, 519.224, 392.17816, 507.50684)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trash1" unique_id=108817596]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash1" unique_id=108817596]
 position = Vector2(0, 1)
 rotation = -0.5692414
 shape = SubResource("CapsuleShape2D_6jqtf")
 
-[node name="Trash2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1109823125]
+[node name="Trash2" type="Area2D" parent="CanvasLayer/Panel" unique_id=1109823125]
 position = Vector2(283, 252)
 script = ExtResource("2_nn6ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash2" unique_id=1162726238]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash2" unique_id=1162726238]
 position = Vector2(2, -3)
 texture = ExtResource("5_53w2d")
 region_enabled = true
 region_rect = Rect2(78.15852, 11.81929, 425.7719, 460.27148)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trash2" unique_id=1570080321]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash2" unique_id=1570080321]
 position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_6jqtf")
 
-[node name="Trash3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=2042153828]
+[node name="Trash3" type="Area2D" parent="CanvasLayer/Panel" unique_id=2042153828]
 position = Vector2(880, 226)
 script = ExtResource("2_nn6ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash3" unique_id=2129727613]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash3" unique_id=2129727613]
 position = Vector2(2, -1)
 scale = Vector2(1, 1.094)
 texture = ExtResource("5_53w2d")
 region_enabled = true
 region_rect = Rect2(702.4725, 25.524956, 450.27386, 408.77396)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trash3" unique_id=745258471]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash3" unique_id=745258471]
 position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_033qq")
 
-[node name="Trash5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=750027424]
+[node name="Trash5" type="Area2D" parent="CanvasLayer/Panel" unique_id=750027424]
 position = Vector2(1640, 751)
 script = ExtResource("2_nn6ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash5" unique_id=260131322]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash5" unique_id=260131322]
 position = Vector2(2, -1)
 scale = Vector2(1, 1.094)
 texture = ExtResource("5_53w2d")
 region_enabled = true
 region_rect = Rect2(1439.1096, 471.49286, 435.95642, 589.87726)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trash5" unique_id=59287520]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash5" unique_id=59287520]
 position = Vector2(-1, 20)
 rotation = -0.18788539
 shape = SubResource("CapsuleShape2D_3pxg8")
 
-[node name="Trash4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=983708059]
+[node name="Trash4" type="Area2D" parent="CanvasLayer/Panel" unique_id=983708059]
 position = Vector2(1550, 236)
 script = ExtResource("2_nn6ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Trash4" unique_id=90510950]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash4" unique_id=90510950]
 position = Vector2(0, 1)
 scale = Vector2(1, 0.966)
 texture = ExtResource("5_53w2d")
 region_enabled = true
 region_rect = Rect2(1490.2689, 15.254601, 345.22717, 412.7484)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Trash4" unique_id=258369129]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Panel/Trash4" unique_id=258369129]
 position = Vector2(0, 1)
 rotation = 0.40529963
 shape = SubResource("CapsuleShape2D_6jqtf")
