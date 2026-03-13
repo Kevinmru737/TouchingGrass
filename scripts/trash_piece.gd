@@ -4,6 +4,7 @@ var dragging = false
 var drag_offset = Vector2.ZERO
 var draggable = false
 static var any_dragging = false
+@export var drop_sound: AudioStream
 @onready var parent = $"../../.."
 
 func _ready():
@@ -30,6 +31,8 @@ func _input(event):
 				check_trashcan()
 
 func check_trashcan():
+	if drop_sound:
+		AudioManager.play_sound(drop_sound)
 	var trashcan = get_parent().get_node("Trashcan")
 	if overlaps_area(trashcan):
 		parent.on_trash_disposed()

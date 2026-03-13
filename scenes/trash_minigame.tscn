@@ -4,7 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://hy5haoqh3dmo" path="res://art/minigames/trashcan/Trash_Can_For_Mini_game.png" id="2_3pxg8"]
 [ext_resource type="Texture2D" uid="uid://dy47dn0nnl2sy" path="res://art/placeholders/trashcan.png" id="2_c8yw1"]
 [ext_resource type="Script" uid="uid://c0aa25hhosufk" path="res://scripts/trash_piece.gd" id="2_nn6ak"]
+[ext_resource type="AudioStream" uid="uid://b4f8u7l6e1y7w" path="res://audio/plastic_garbage.wav" id="5_6jqtf"]
 [ext_resource type="Texture2D" uid="uid://dfiu0iwiu51p0" path="res://art/minigames/trashcan/Trash_For_Mini_game.png" id="5_53w2d"]
+[ext_resource type="AudioStream" uid="uid://c4wfw4wntpd3x" path="res://audio/bottle_garbage.wav" id="5_vfgvs"]
+[ext_resource type="AudioStream" uid="uid://tnnaxjweuwsb" path="res://audio/can_garbage.wav" id="6_3pxg8"]
+[ext_resource type="AudioStream" uid="uid://db8bjhevjhn3p" path="res://audio/paper1_garbage.wav" id="7_i37hm"]
+[ext_resource type="AudioStream" uid="uid://dklw0ge7d2ll1" path="res://audio/paper2_garbage.wav" id="8_kjq8s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qycf"]
 radius = 185.80533
@@ -70,6 +75,7 @@ shape = SubResource("CapsuleShape2D_7qycf")
 [node name="Trash1" type="Area2D" parent="CanvasLayer/Panel" unique_id=1660859796]
 position = Vector2(267, 760)
 script = ExtResource("2_nn6ak")
+drop_sound = ExtResource("5_vfgvs")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash1" unique_id=315617711]
 position = Vector2(0, 1)
@@ -86,6 +92,7 @@ shape = SubResource("CapsuleShape2D_6jqtf")
 [node name="Trash2" type="Area2D" parent="CanvasLayer/Panel" unique_id=1109823125]
 position = Vector2(283, 252)
 script = ExtResource("2_nn6ak")
+drop_sound = ExtResource("7_i37hm")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash2" unique_id=1162726238]
 position = Vector2(2, -3)
@@ -100,6 +107,7 @@ shape = SubResource("CircleShape2D_6jqtf")
 [node name="Trash3" type="Area2D" parent="CanvasLayer/Panel" unique_id=2042153828]
 position = Vector2(880, 226)
 script = ExtResource("2_nn6ak")
+drop_sound = ExtResource("8_kjq8s")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash3" unique_id=2129727613]
 position = Vector2(2, -1)
@@ -115,6 +123,7 @@ shape = SubResource("CircleShape2D_033qq")
 [node name="Trash5" type="Area2D" parent="CanvasLayer/Panel" unique_id=750027424]
 position = Vector2(1640, 751)
 script = ExtResource("2_nn6ak")
+drop_sound = ExtResource("5_6jqtf")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash5" unique_id=260131322]
 position = Vector2(2, -1)
@@ -131,6 +140,7 @@ shape = SubResource("CapsuleShape2D_3pxg8")
 [node name="Trash4" type="Area2D" parent="CanvasLayer/Panel" unique_id=983708059]
 position = Vector2(1550, 236)
 script = ExtResource("2_nn6ak")
+drop_sound = ExtResource("6_3pxg8")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/Trash4" unique_id=90510950]
 position = Vector2(0, 1)
