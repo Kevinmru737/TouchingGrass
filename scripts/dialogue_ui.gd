@@ -89,4 +89,5 @@ func fade_in_dialogue():
 func fade_out_dialogue():
 	dialogue_anim_player.play("fade_out")
 	await dialogue_anim_player.animation_finished
+	get_viewport().set_input_as_handled()
 	self.hide()
