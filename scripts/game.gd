@@ -24,6 +24,7 @@ enum GameState {
 	TURN_ON_MUSIC,  
 	SORT_BOOKS,
 	CLEAN_GARBAGE,
+	PRE_GRASS,
 	TOUCH_GRASS
 }
 
@@ -42,12 +43,21 @@ var minigame_scene = load("res://scenes/trash_minigame.tscn")
 var touch_grass_scene = load("res://scenes/touch_grass.tscn")
 var main_game
 var ending_started = false
+var minigame
+var final_loaded = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Happy.hide()
+	ending_started = false
+	dialog_active = false
+	curr_dialog = "intro"
+	dialog_done = false
+	advance_game = false
+	curr_game_state = GameState.INTRO
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
 	if curr_game_state == GameState.INTRO:
 		
 		if Input.is_action_just_pressed("click"):
@@ -60,14 +70,15 @@ func _process(_delta: float) -> void:
 			main_game = MAIN_GAME.instantiate()
 			self.add_child(main_game)
 			move_child(main_game, 0)
+			
 			$Background/ColorRect.hide()
 			SceneTransition.reset()
 			SceneTransition.fade_from_black()
 			advance_game = false
 			
 			#the below is equiv to curr_game_state++ but godot throws a warning, thus the casting
-			curr_game_state = (curr_game_state as int + 1) as GameState
-			
+			#curr_game_state = (curr_game_state as int + 1) as GameState
+			curr_game_state = GameState.CLEAN_GARBAGE
 			# grab list of interactables to connect their signals
 			interactables = get_tree().get_nodes_in_group("interactables")
 			for i in interactables:
@@ -78,17 +89,19 @@ func _process(_delta: float) -> void:
 		if dialog_done:
 			dialog_active = false
 			curr_interact_obj = "None"
-		if not dialog_done and dialog_active and Input.is_action_just_pressed("click") :
-			dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+		if not dialog_done and dialog_active and Input.is_action_just_pressed("click"):
+			if curr_game_state != GameState.TOUCH_GRASS:
+				dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+			elif curr_game_state == GameState.TOUCH_GRASS and final_loaded:
+				dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 		
 		if advance_game and dialog_done:
 			print(curr_game_state)
 			curr_game_state = (curr_game_state as int + 1) as GameState
 			advance_game = false
-			if curr_game_state == GameState.TOUCH_GRASS and ending_started == false:
-				var tg_scene = touch_grass_scene.instantiate()
-				self.add_child(tg_scene)
-				move_child(tg_scene, 0)
+			if curr_game_state == GameState.PRE_GRASS and ending_started == false:
+				$Exit.show()
+				curr_game_state = (curr_game_state as int + 1) as GameState
 				ending_started = true
 				advance_game = false
 				dialog_done = false
@@ -147,7 +160,7 @@ func _on_interact_initiated(obj_name):
 			failed_option = true
 	if curr_game_state == GameState.CLEAN_GARBAGE:
 		if curr_interact_obj == dialog_options["Trashcan"]:
-			var minigame = minigame_scene.instantiate()
+			minigame = minigame_scene.instantiate()
 			minigame.trash_cleaned.connect(_on_minigame_completed)
 			get_tree().current_scene.add_child(minigame)
 			main_game.hide()
@@ -160,6 +173,9 @@ func _on_interact_initiated(obj_name):
 	
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 	
+	if failed_option and dialog_done:
+		bad_option_chosen()
+	
 	
 func _bg_minigame_completed():
 	curr_dialog ="sort_books_success"
@@ -170,17 +186,39 @@ func _bg_minigame_completed():
 	get_interactable("Bookshelf").success_interact()
 	
 func _on_minigame_completed():
+	main_game.show()
 	curr_dialog ="clean_garbage_success"
-	#main_game.show_happy()
-	main_game.hide()
 	$Happy.show()
+	$Happy/AnimationPlayer.play("fade in")
+	main_game.fade_out()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # trap mouse
+	await $Happy/AnimationPlayer.animation_finished
+	main_game.hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   # release
 	advance_game = true
 	dialog_active = true
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
-	#get_interactable("Trashcan").success_interact()
 
 func get_interactable(obj_name):
 	for i in interactables:
 		if i.name == obj_name:
 			return i
+	
+func bad_option_chosen():
+	await SceneTransition.fade_to_black()
+	$Background/ColorRect.show()
+	main_game.queue_free()
+	_ready()
+	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+	
+func go_outside():
+	var tg_scene = touch_grass_scene.instantiate()
+	self.add_child(tg_scene)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # trap mouse
+	await tg_scene.fade_in()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   # release
+	final_loaded = true
+	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
+	#move_child(tg_scene, 0)
+	
 	

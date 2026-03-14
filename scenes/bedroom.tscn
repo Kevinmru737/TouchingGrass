@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0xbgmtwsyoml"]
 
-[ext_resource type="Texture2D" uid="uid://b5v01fx44tga0" path="res://art/room_dark/Depressed_Room_Final_Together_2.png" id="1_pwtdf"]
+[ext_resource type="Texture2D" uid="uid://bntnprwdidwj6" path="res://art/room_dark/Depressed_Room_Final_Together_2.png" id="1_pwtdf"]
 [ext_resource type="Texture2D" uid="uid://wues5oasfb76" path="res://art/room_disillusioned/Depressed_Room_Without_Bed.png" id="1_tjgix"]
 [ext_resource type="PackedScene" uid="uid://3bgg303draey" path="res://scenes/trashcan.tscn" id="2_pwtdf"]
 [ext_resource type="Texture2D" uid="uid://b3tr2nmh2eol" path="res://art/room_bright/Happy_Room_Final_Together_1.png" id="3_xunnl"]

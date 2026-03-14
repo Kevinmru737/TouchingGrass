@@ -9,3 +9,6 @@ func _ready():
 
 func show_happy():
 	bgs.show()
+	
+func fade_out():
+	$AnimationPlayer.play("fade_out")
