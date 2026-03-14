@@ -32,6 +32,9 @@ func _input(event):
 func _on_mouse_entered():
 	HoverManager.on_hovered(self)
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(0, 0))
+	if not bright_sprite.visible:
+		var tween = create_tween()
+		tween.tween_property(dark_sprite, "modulate", Color(1.3, 1.3, 1.3, 1.0), 0.1)
 	#var tween = create_tween()
 	#tween.tween_property(backglow, "modulate:a", 1.0, 0.3)
 	# Optional: scale up for radiating effect
@@ -41,6 +44,9 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	HoverManager.on_unhovered(self)
 	Input.set_custom_mouse_cursor(null)
+	if not bright_sprite.visible:
+		var tween = create_tween()
+		tween.tween_property(dark_sprite, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
 	#var tween = create_tween()
 	#tween.tween_property(backglow, "modulate:a", 0.0, 0.3)
 	#tween.parallel().tween_property(backglow, "scale", Vector2(1.0, 1.0), 0.3)

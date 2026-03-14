@@ -69,11 +69,11 @@ position = Vector2(-2.0067139, 12.351227)
 scale = Vector2(0.66890424, 0.66890424)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Panel/Bookshelf" unique_id=135437142]
-position = Vector2(328.99994, 10.487122)
-scale = Vector2(0.9710531, 0.997246)
+position = Vector2(31.228874, 9.939779)
+scale = Vector2(0.9957993, 0.997246)
 texture = ExtResource("1_hnm66")
 region_enabled = true
-region_rect = Rect2(648, 0, 1153, 1080)
+region_rect = Rect2(0, 0, 1919, 1080)
 
 [node name="Book1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=749841833]
 position = Vector2(-558.00006, -177)
@@ -238,7 +238,7 @@ position = Vector2(4.6491623e-05, 4.5120716e-05)
 shape = SubResource("RectangleShape2D_bu2l8")
 
 [node name="Book10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1053583476]
-position = Vector2(220.00003, 314)
+position = Vector2(202.00003, 314)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
 drop_sound = ExtResource("7_stcna")
@@ -256,7 +256,7 @@ position = Vector2(5.1021576e-05, -2.6464462e-05)
 shape = SubResource("RectangleShape2D_ee0ay")
 
 [node name="Slot1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=699524522]
-position = Vector2(439, -4)
+position = Vector2(419, -4)
 script = ExtResource("6_8ccec")
 slot_id = 1
 
@@ -267,7 +267,7 @@ shape = SubResource("RectangleShape2D_8ccec")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1292178403]
-position = Vector2(390, -26)
+position = Vector2(370, -26)
 script = ExtResource("6_8ccec")
 slot_id = 2
 
@@ -278,7 +278,7 @@ shape = SubResource("RectangleShape2D_3yg3x")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=613661917]
-position = Vector2(337, -27)
+position = Vector2(317, -27)
 script = ExtResource("6_8ccec")
 slot_id = 3
 
@@ -289,7 +289,7 @@ shape = SubResource("RectangleShape2D_yf2wr")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=862168566]
-position = Vector2(492, 42)
+position = Vector2(472, 42)
 script = ExtResource("6_8ccec")
 slot_id = 4
 
@@ -300,7 +300,7 @@ shape = SubResource("RectangleShape2D_7ym7y")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=508709659]
-position = Vector2(113, 33)
+position = Vector2(93, 33)
 script = ExtResource("6_8ccec")
 slot_id = 5
 
@@ -311,7 +311,7 @@ shape = SubResource("RectangleShape2D_stcna")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot6" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=297655968]
-position = Vector2(250, -64)
+position = Vector2(230, -64)
 script = ExtResource("6_8ccec")
 slot_id = 6
 
@@ -322,7 +322,7 @@ shape = SubResource("RectangleShape2D_dukt2")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot7" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=2094877926]
-position = Vector2(293, -63)
+position = Vector2(273, -63)
 script = ExtResource("6_8ccec")
 slot_id = 7
 
@@ -333,7 +333,7 @@ shape = SubResource("RectangleShape2D_1okbr")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot8" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=908230084]
-position = Vector2(69, -62)
+position = Vector2(49, -62)
 script = ExtResource("6_8ccec")
 slot_id = 8
 
@@ -344,7 +344,7 @@ shape = SubResource("RectangleShape2D_ov262")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot9" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1294438673]
-position = Vector2(167, 87)
+position = Vector2(147, 87)
 script = ExtResource("6_8ccec")
 slot_id = 9
 
@@ -355,7 +355,7 @@ shape = SubResource("RectangleShape2D_bu2l8")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1165743048]
-position = Vector2(182, 157)
+position = Vector2(162, 157)
 script = ExtResource("6_8ccec")
 slot_id = 10
 
