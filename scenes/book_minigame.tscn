@@ -76,6 +76,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1919, 1080)
 
 [node name="Book1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=749841833]
+z_index = 2
 position = Vector2(-558.00006, -177)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -94,6 +95,7 @@ position = Vector2(9.280443e-05, 1.5676022e-05)
 shape = SubResource("RectangleShape2D_8ccec")
 
 [node name="Book2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=247438064]
+z_index = 2
 position = Vector2(-459.99994, -94.00003)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -112,6 +114,7 @@ position = Vector2(4.1604042e-05, -1.2397766e-05)
 shape = SubResource("RectangleShape2D_3yg3x")
 
 [node name="Book3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1239162426]
+z_index = 2
 position = Vector2(-366.00003, 101.99999)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -130,6 +133,7 @@ position = Vector2(3.3974648e-05, 7.1525574e-06)
 shape = SubResource("RectangleShape2D_yf2wr")
 
 [node name="Book4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1615801887]
+z_index = 2
 position = Vector2(-266.00003, -92)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -148,6 +152,7 @@ position = Vector2(2.9563904e-05, -1.335144e-05)
 shape = SubResource("RectangleShape2D_7ym7y")
 
 [node name="Book5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=911798259]
+z_index = 2
 position = Vector2(226.99991, -283)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -166,6 +171,7 @@ position = Vector2(3.886223e-05, 2.5987625e-05)
 shape = SubResource("RectangleShape2D_stcna")
 
 [node name="Book6" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=943511465]
+z_index = 2
 position = Vector2(481.9999, -255.99997)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -184,6 +190,7 @@ position = Vector2(5.1021576e-05, -4.172325e-07)
 shape = SubResource("RectangleShape2D_dukt2")
 
 [node name="Book7" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=642417952]
+z_index = 2
 position = Vector2(-542.00006, 137)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -202,6 +209,7 @@ position = Vector2(1.847744e-06, 4.1604042e-05)
 shape = SubResource("RectangleShape2D_1okbr")
 
 [node name="Book8" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=12852603]
+z_index = 2
 position = Vector2(-346.00003, 300)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -220,6 +228,7 @@ position = Vector2(5.567074e-05, 3.7670135e-05)
 shape = SubResource("RectangleShape2D_ov262")
 
 [node name="Book9" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=365212001]
+z_index = 2
 position = Vector2(171.00003, -215.00002)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -238,6 +247,7 @@ position = Vector2(4.6491623e-05, 4.5120716e-05)
 shape = SubResource("RectangleShape2D_bu2l8")
 
 [node name="Book10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1053583476]
+z_index = 2
 position = Vector2(202.00003, 314)
 scale = Vector2(0.66890424, 0.66890424)
 script = ExtResource("3_etw1u")
@@ -256,7 +266,8 @@ position = Vector2(5.1021576e-05, -2.6464462e-05)
 shape = SubResource("RectangleShape2D_ee0ay")
 
 [node name="Slot1" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=699524522]
-position = Vector2(419, -4)
+z_index = 1
+position = Vector2(412, -5)
 script = ExtResource("6_8ccec")
 slot_id = 1
 
@@ -267,7 +278,8 @@ shape = SubResource("RectangleShape2D_8ccec")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot2" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1292178403]
-position = Vector2(370, -26)
+z_index = 1
+position = Vector2(363, -29)
 script = ExtResource("6_8ccec")
 slot_id = 2
 
@@ -278,29 +290,31 @@ shape = SubResource("RectangleShape2D_3yg3x")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot3" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=613661917]
-position = Vector2(317, -27)
+z_index = 1
+position = Vector2(309, -29)
 script = ExtResource("6_8ccec")
 slot_id = 3
 
 [node name="Slot3" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot3" unique_id=1662038311]
-position = Vector2(-0.99990845, 0.9999981)
+position = Vector2(-6.1035156e-05, 0)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_yf2wr")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot4" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=862168566]
-position = Vector2(472, 42)
+position = Vector2(468, 42)
 script = ExtResource("6_8ccec")
 slot_id = 4
 
 [node name="Slot4" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot4" unique_id=379811032]
-position = Vector2(-0.9999695, 3.8146973e-06)
+position = Vector2(3.0457973e-05, 3.8146973e-06)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_7ym7y")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot5" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=508709659]
-position = Vector2(93, 33)
+z_index = 1
+position = Vector2(85, 30)
 script = ExtResource("6_8ccec")
 slot_id = 5
 
@@ -311,18 +325,20 @@ shape = SubResource("RectangleShape2D_stcna")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot6" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=297655968]
-position = Vector2(230, -64)
+z_index = 1
+position = Vector2(225, -64)
 script = ExtResource("6_8ccec")
 slot_id = 6
 
 [node name="Slot6" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot6" unique_id=605761366]
-position = Vector2(-0.99998474, 0.9999962)
+position = Vector2(1.5199184e-05, -3.7550926e-06)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_dukt2")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot7" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=2094877926]
-position = Vector2(273, -63)
+z_index = 1
+position = Vector2(266, -64)
 script = ExtResource("6_8ccec")
 slot_id = 7
 
@@ -333,37 +349,125 @@ shape = SubResource("RectangleShape2D_1okbr")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot8" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=908230084]
-position = Vector2(49, -62)
+z_index = 1
+position = Vector2(42, -64)
 script = ExtResource("6_8ccec")
 slot_id = 8
 
 [node name="Slot8" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot8" unique_id=463399830]
-position = Vector2(-0.9999924, -3.8146973e-06)
+position = Vector2(7.56979e-06, -3.8146973e-06)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_ov262")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot9" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1294438673]
-position = Vector2(147, 87)
+z_index = 1
+position = Vector2(140, 87)
 script = ExtResource("6_8ccec")
 slot_id = 9
 
 [node name="Slot9" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot9" unique_id=317356069]
-position = Vector2(1.5258789e-05, 1.0000076)
+position = Vector2(1.5258789e-05, 7.688999e-06)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_bu2l8")
 debug_color = Color(0.89411765, 0.24705882, 0.5254902, 0.41960785)
 
 [node name="Slot10" type="Area2D" parent="CanvasLayer/Control/Panel" unique_id=1165743048]
-position = Vector2(162, 157)
+z_index = 1
+position = Vector2(154, 156)
 script = ExtResource("6_8ccec")
 slot_id = 10
 
 [node name="Slot10" type="CollisionShape2D" parent="CanvasLayer/Control/Panel/Slot10" unique_id=159611964]
-position = Vector2(-0.99998474, -0.99998474)
+position = Vector2(1.5199184e-05, -1.5318394e-05)
 scale = Vector2(0.66890424, 0.66890424)
 shape = SubResource("RectangleShape2D_ee0ay")
 debug_color = Color(0.8935266, 0.24766585, 0.5258745, 0.41960785)
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/Control" unique_id=1246836878]
+z_index = 1
+position = Vector2(620, 340)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=266221602]
+offset_left = -113.0
+offset_top = -119.0
+offset_right = 200.0
+offset_bottom = -9.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=1270775079]
+offset_left = -113.00001
+offset_top = 0.9999924
+offset_right = 265.56525
+offset_bottom = 38.780876
+scale = Vector2(1.0460548, 1.5351685)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=998360225]
+offset_left = -113.0
+offset_top = 66.0
+offset_right = 393.0
+offset_bottom = 105.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=1251045439]
+offset_left = -113.0
+offset_top = 111.0
+offset_right = 424.0
+offset_bottom = 198.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=689485875]
+offset_left = 207.0
+offset_top = -118.99999
+offset_right = 243.0
+offset_bottom = -8.999992
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=1315601572]
+offset_left = 249.0
+offset_top = -119.0
+offset_right = 283.0
+offset_bottom = -9.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect7" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=1360212923]
+offset_left = 291.0
+offset_top = -119.0
+offset_right = 324.0
+offset_bottom = 59.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect8" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=1476338640]
+offset_left = 330.0
+offset_top = -119.0
+offset_right = 393.0
+offset_bottom = 59.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect9" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=26599316]
+offset_left = 399.0
+offset_top = -119.0
+offset_right = 425.0
+offset_bottom = 107.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="ColorRect10" type="ColorRect" parent="CanvasLayer/Control/Node2D" unique_id=193248939]
+offset_left = 431.0
+offset_top = -119.0
+offset_right = 505.0
+offset_bottom = 198.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.078431375)
 
 [connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_exited"]
