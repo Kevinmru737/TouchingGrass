@@ -42,10 +42,17 @@ var minigame_scene = load("res://scenes/trash_minigame.tscn")
 var touch_grass_scene = load("res://scenes/touch_grass.tscn")
 var main_game
 var ending_started = false
+var minigame
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Happy.hide()
+	ending_started = false
+	dialog_active = false
+	curr_dialog = "intro"
+	dialog_done = false
+	advance_game = false
+	curr_game_state = GameState.INTRO
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
@@ -149,7 +156,7 @@ func _on_interact_initiated(obj_name):
 			failed_option = true
 	if curr_game_state == GameState.CLEAN_GARBAGE:
 		if curr_interact_obj == dialog_options["Trashcan"]:
-			var minigame = minigame_scene.instantiate()
+			minigame = minigame_scene.instantiate()
 			minigame.trash_cleaned.connect(_on_minigame_completed)
 			get_tree().current_scene.add_child(minigame)
 			main_game.hide()
@@ -162,6 +169,9 @@ func _on_interact_initiated(obj_name):
 	
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 	
+	if failed_option and dialog_done:
+		bad_option_chosen()
+	
 	
 func _bg_minigame_completed():
 	curr_dialog ="sort_books_success"
@@ -172,10 +182,15 @@ func _bg_minigame_completed():
 	get_interactable("Bookshelf").success_interact()
 	
 func _on_minigame_completed():
+	main_game.show()
 	curr_dialog ="clean_garbage_success"
 	#main_game.show_happy()
-	main_game.hide()
+	minigame.trash_cleaned.disconnect(_on_minigame_completed)
 	$Happy.show()
+	$Happy/AnimationPlayer.play("fade in")
+	main_game.fade_out()
+	await $Happy/AnimationPlayer.animation_finished
+	main_game.hide()
 	advance_game = true
 	dialog_active = true
 	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
@@ -185,4 +200,11 @@ func get_interactable(obj_name):
 	for i in interactables:
 		if i.name == obj_name:
 			return i
+	
+func bad_option_chosen():
+	await SceneTransition.fade_to_black()
+	$Background/ColorRect.show()
+	main_game.queue_free()
+	_ready()
+	dialog_done = dialogue_ui.process_dialogue(curr_dialog)
 	

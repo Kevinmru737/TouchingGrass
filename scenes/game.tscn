@@ -42,6 +42,43 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqjtg"]
 
+[sub_resource type="Animation" id="Animation_lbhrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_iywne"]
+resource_name = "fade in"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p57ef"]
+_data = {
+&"RESET": SubResource("Animation_lbhrr"),
+&"fade in": SubResource("Animation_iywne")
+}
+
 [node name="GameManager" type="Node" unique_id=2071582035]
 script = ExtResource("1_yqjtg")
 
@@ -82,3 +119,6 @@ zoom = Vector2(0.67, 0.67)
 [node name="Happy" type="Sprite2D" parent="." unique_id=67990782]
 position = Vector2(960, 540)
 texture = ExtResource("3_lnu2h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Happy" unique_id=1908855729]
+libraries/ = SubResource("AnimationLibrary_p57ef")
