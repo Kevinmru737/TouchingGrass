@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cyae3280apwks"]
+
+[ext_resource type="Shader" uid="uid://drfeqc1s62gma" path="res://shaders/glow.gdshader" id="1_pke8b"]
+[ext_resource type="Script" uid="uid://c74q4vmnntqbk" path="res://color_rect.gd" id="1_qbjnn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_letgk"]
+shader = ExtResource("1_pke8b")
+
+[node name="ColorRect" type="Polygon2D" unique_id=119540473]
+material = SubResource("ShaderMaterial_letgk")
+script = ExtResource("1_qbjnn")

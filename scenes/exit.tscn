@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c5xn1j884ajun"]
+
+[ext_resource type="Texture2D" uid="uid://e3sxehgqre6o" path="res://art/misc/arrow.png" id="1_uyw7u"]
+[ext_resource type="Texture2D" uid="uid://cfbwsnxjhfpt8" path="res://art/misc/light.png" id="2_uyw7u"]
+
+[node name="Exit" type="Area2D" unique_id=357436016]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=826179242]
+texture = ExtResource("1_uyw7u")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=345881810]
+position = Vector2(21, -1)
+texture = ExtResource("2_uyw7u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=662327819]
+position = Vector2(54, 64)
+polygon = PackedVector2Array(325, 360, 509, 256, 676, 350, 481, 472)

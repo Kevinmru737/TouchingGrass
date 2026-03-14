@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmkwij3gsgq7b"]
+
+[ext_resource type="Texture2D" uid="uid://b38wb2tin4ii7" path="res://shaders/half_circle_glow.tres" id="1_hugpf"]
+[ext_resource type="Script" uid="uid://djwp4xylxdndq" path="res://emitting_glow.gd" id="1_voflj"]
+
+[node name="Node2D" type="CPUParticles2D" unique_id=115204916]
+position = Vector2(654, 379)
+texture = ExtResource("1_hugpf")
+script = ExtResource("1_voflj")
