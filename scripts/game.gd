@@ -77,8 +77,8 @@ func _process(_delta: float) -> void:
 			advance_game = false
 			
 			#the below is equiv to curr_game_state++ but godot throws a warning, thus the casting
-			#curr_game_state = (curr_game_state as int + 1) as GameState
-			curr_game_state = GameState.CLEAN_GARBAGE
+			curr_game_state = (curr_game_state as int + 1) as GameState
+			#curr_game_state = GameState.CLEAN_GARBAGE
 			# grab list of interactables to connect their signals
 			interactables = get_tree().get_nodes_in_group("interactables")
 			for i in interactables:
