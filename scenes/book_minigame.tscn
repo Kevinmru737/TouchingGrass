@@ -469,24 +469,3 @@ offset_right = 505.0
 offset_bottom = 198.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0.078431375)
-
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book1" to="CanvasLayer/Control/Panel/Book1" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book2" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_2_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book2" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_2_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book3" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_3_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book3" to="CanvasLayer/Control/Panel/Book1" method="_on_trash_3_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book4" to="." method="_on_book_4_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book4" to="." method="_on_book_4_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book5" to="." method="_on_book_5_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book5" to="." method="_on_book_5_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book6" to="." method="_on_book_6_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book6" to="." method="_on_book_6_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book7" to="." method="_on_book_7_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book7" to="." method="_on_book_7_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book8" to="." method="_on_book_8_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book8" to="." method="_on_book_8_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book9" to="." method="_on_book_9_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book9" to="." method="_on_book_9_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/Control/Panel/Book10" to="." method="_on_book_10_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Control/Panel/Book10" to="." method="_on_book_10_mouse_exited"]
