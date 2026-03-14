@@ -48,6 +48,7 @@ func _ready() -> void:
 	$Happy.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
 	if curr_game_state == GameState.INTRO:
 		
 		if Input.is_action_just_pressed("click"):
@@ -60,6 +61,7 @@ func _process(_delta: float) -> void:
 			main_game = MAIN_GAME.instantiate()
 			self.add_child(main_game)
 			move_child(main_game, 0)
+			
 			$Background/ColorRect.hide()
 			SceneTransition.reset()
 			SceneTransition.fade_from_black()
@@ -88,7 +90,7 @@ func _process(_delta: float) -> void:
 			if curr_game_state == GameState.TOUCH_GRASS and ending_started == false:
 				var tg_scene = touch_grass_scene.instantiate()
 				self.add_child(tg_scene)
-				move_child(tg_scene, 0)
+				#move_child(tg_scene, 0)
 				ending_started = true
 				advance_game = false
 				dialog_done = false
