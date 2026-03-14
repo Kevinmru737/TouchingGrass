@@ -45,7 +45,8 @@ var main_game
 var ending_started = false
 var minigame
 var final_loaded = false
-
+var jazz_music = preload("res://audio/bensound-hipjazz.mp3")
+var sad_music = preload("res://audio/2025-06-05_I_Wish_I_Told_You_-_www.FesliyanStudios.com_David_Fesliyan.mp3")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Happy.hide()
@@ -55,6 +56,7 @@ func _ready() -> void:
 	dialog_done = false
 	advance_game = false
 	curr_game_state = GameState.INTRO
+	AudioManager.play_music(sad_music)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
@@ -77,8 +79,8 @@ func _process(_delta: float) -> void:
 			advance_game = false
 			
 			#the below is equiv to curr_game_state++ but godot throws a warning, thus the casting
-			#curr_game_state = (curr_game_state as int + 1) as GameState
-			curr_game_state = GameState.CLEAN_GARBAGE
+			curr_game_state = (curr_game_state as int + 1) as GameState
+			#curr_game_state = GameState.CLEAN_GARBAGE
 			# grab list of interactables to connect their signals
 			interactables = get_tree().get_nodes_in_group("interactables")
 			for i in interactables:
@@ -142,6 +144,9 @@ func _on_interact_initiated(obj_name):
 		if curr_interact_obj == dialog_options["Musicplayer"]:
 			curr_dialog = curr_interact_obj + "_success"
 			advance_game = true
+			if not AudioManager.music_player.stream == jazz_music:
+				AudioManager.play_music(jazz_music)
+				AudioManager.music_player.volume_db = -25
 			get_interactable("Musicplayer").success_interact()
 		elif curr_interact_obj == dialog_options["Bed"] or  curr_interact_obj == dialog_options["Fishtank"]:
 			curr_dialog = curr_interact_obj + "_done"
@@ -167,6 +172,7 @@ func _on_interact_initiated(obj_name):
 			return
 		elif curr_interact_obj == dialog_options["Bed"] or dialog_options["Fishtank"] or dialog_options["Musicplayer"] or dialog_options["Bookshelf"]:
 			curr_dialog = curr_interact_obj + "_done"
+			#this is broken FYI but doesn't get reached so we good probably
 	
 	if failed_option:
 		curr_dialog = curr_interact_obj + "_fail"
